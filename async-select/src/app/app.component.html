@@ -1,0 +1,20 @@
+<form>
+  <div>
+    <span>Country</span>
+    <select name="country" ngModel (ngModelChange)="selectedCountry$.next($event); selectedCity$.next(null)">
+      <option *ngFor="let c of countries$ | async" [value]="c">{{ c }}</option>
+    </select>
+  </div>
+  <div *ngIf="selectedCountry$ | async">
+    <span>City</span>
+    <select name="city" ngModel (ngModelChange)="selectedCity$.next($event)">
+      <option *ngFor="let c of cities$ | async" [value]="c">{{ c }}</option>
+    </select>
+  </div>
+</form>
+<p>
+  Country: {{ selectedCountry$ | async }}
+</p>
+<p>
+  City: {{ selectedCity$ | async }}
+</p>

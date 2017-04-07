@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="id" datatype="html">
+        <source>起動!</source>
+        <target/>
+        <note priority="1" from="description">description</note>
+        <note priority="1" from="meaning">meaning</note>
+      </trans-unit>
+      <trans-unit id="5e7f57cc2afda9d12744fcaf44b91c2f21ec5b5a" datatype="html">
+        <source>
+  some text (<x id="INTERPOLATION"/>)
+</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="a2f7036398630d3dceb07c29e23f8345385db8db" datatype="html">
+        <source>You have <x id="ICU"/></source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="8db8dd73f7636b6b6e39d1727f32b5880b8b2c2a" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {no selection} =1 {one element} other {<x id="INTERPOLATION"/> elements} }</source>
+        <target/>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
