@@ -1,6 +1,7 @@
 # Day 1
 
-## Keynote
+
+## [Keynote - STEPHEN FLUIN and IGOR MINAR](https://www.youtube.com/watch?v=anzsE2TbCyk)
 
 - Why we build Angular
 
@@ -104,8 +105,10 @@ Who we are
 Where we are today
 Our plans for the future
 
-## John Papa
-Right tools
+## [I AM ONE WITH ANGULAR, ANGULAR IS ONE WITH ME - JOHN PAPA](https://www.youtube.com/watch?v=h7eVZg3j_Lk) 
+  - slide: weekend
+
+  Right tools
 
 Developing toools
 CLI, VS Code, Angular Snippets, Language Service, Azure Functions
@@ -151,8 +154,10 @@ johnpapa/one-with-angular
 
 PluralSight Angular CLI today
 
-## Minko Gechev: Compiler
-generate code from component to...
+## [Mad science with the Angular Compiler - MINKO GECHEV](https://www.youtube.com/watch?v=tBV4IQwPssU)
+  - https://speakerdeck.com/mgechev/mad-science-with-the-angular-compiler
+
+  generate code from component to...
 efficient vies, efficient providers instantiation
 
 - Transformation
@@ -191,7 +196,14 @@ mgechev/ngworld
 visualization
 ngworld -p tsconfig.json && open world/index.html
 
-## Animations
+## [Creating VR Experiences with Angular and WebGL - AUSTIN MCDANIEL](https://www.youtube.com/watch?v=L_eQKnl8sao)
+
+## [Module vs Module - DEBORAH KURATA](https://www.youtube.com/watch?v=ntJ-P-Cvo7o)
+
+## [Embrace Component Tranquility - JUSTIN SCHWARTZENBERGER](https://www.youtube.com/watch?v=d7fLYenKy-I)
+
+## [Animations in Angular 4.0.0 - MATIAS NIEMELA](https://www.youtube.com/watch?v=Oh9wj-1p2BM)
+
 Angular 4.1
 - `animation()` input variables
 - `query()`/`queryAll()`
@@ -207,7 +219,7 @@ Transitions = route changes
 div [@routerAnimations]="fun(r)" > router-outelt #r="outlet"
 yom.nu/ng-conf-2017
 
-## No Sandbox No Problem @tim_ehat
+## [Keeping the Sand Out of Your Eyes  No Sandbox, No Problem - TIM EHAT](https://www.youtube.com/watch?v=Lkda4xNPi5M)
 AngularJS 1.6
 - Injection
 Executing User Content is Bad
@@ -237,7 +249,21 @@ Use ng-non-bindable
 Don't pass user contents to $func
 Hack your app
 
-## Compiler 4.0
+## [Thoughtful Component Design - JEREMY ELBOURN and MILES MALERBA](https://www.youtube.com/watch?v=0BikjL858OQ)
+
+## [Back from the past: A tale of helping others upgrade from Angular 1.x - SERGIO CRUZ](https://www.youtube.com/watch?v=FFhJSkI35U8)
+
+## [Mischief Maker - LUKAS RUEBBELKE and ROGER TIPPING](https://www.youtube.com/watch?v=kW37RU5k8xM)
+
+## [ng-STEAM - JOE SKEEN and GWEN SKEEN](https://www.youtube.com/watch?v=39vCAvW0a7E)
+
+## [The Memory Leak Brain Drain - JON BOYD](https://www.youtube.com/watch?v=cWHR-Eqe8q4)
+
+## [There and Back Again  a developer’s tale - JACOB TURNER](https://www.youtube.com/watch?v=IFblumxIFW8)
+
+## [The Little Tool That Dreams Big - HANS LARSEN](https://www.youtube.com/watch?v=f9hhzDZXWPM)
+
+## [The Angular Compiler 4.0 - TOBIAS BOSCH](https://www.youtube.com/watch?v=RXYjPYkFwy4)
 
 smaller generated code
 
@@ -294,7 +320,7 @@ Next
 - More flexible metadata (3rd party tooling)
 - Remove ngfactory.ts files (more simpler)
 
-## RxJS
+## [Reactive Programming with RxJS  A Beginner’s Perspective - TRACY LEE and BEN LESH](https://www.youtube.com/watch?v=aZRJOVPMW4k)
 
 Perspective
 
@@ -330,3 +356,7 @@ Wrap Speech API
 
 keyword$ = merge(spoken, typed).share()
 
+
+## [How to Scratch an Itch - JUSTIN SEARLS](https://www.youtube.com/watch?v=7YB1I5h2ujw)
+
+- Make apps for your fun
