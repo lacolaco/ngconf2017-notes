@@ -72,6 +72,7 @@
 - [Create and Attend Meetups - KEN SNYDER](https://www.youtube.com/watch?v=siGPF6Eng5A)
 - [ngGirls Just Want to Have Fun - SHMUELA JACOBS](https://www.youtube.com/watch?v=DTBCJ92FDUI)
 - [Firebase and Google Cloud Functions: Serverless Peanut Butter and Jelly - BRET MCGOWEN](https://www.youtube.com/watch?v=kG71Hg9cUhQ)
+- Best Practice
 - [NG Conf2017 - Angular Team Panel](https://www.youtube.com/watch?v=rboo-s9yq8s)
 
 

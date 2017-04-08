@@ -1,7 +1,6 @@
 # Day 3
 
-## Keynote
-Brad, Rob
+## [Keynote Day 3 - BRAD GREEN and ROM WORMALD](https://www.youtube.com/watch?v=Nj9_p4qvm5U)
 
 Angular at Google
 Where uses, Why open source
@@ -149,13 +148,13 @@ AMP Pages
 without JS
 no interactive
 
-AMP (first paint, engage) + PWA (push, )
+AMP (first paint, engage) + PWA (push, ): will get involved
 - Instant first paint
 - install SW in background
 - click thru to app
 - Instant interactivity (intercept request)
 
-## Shai: Angular Router LIVE demo
+## Angular Router Authentication & Authorization – REAL LIVE LIVE LIVE LIVE LIVE DEMO
 
 authentication
 verifying indentity
@@ -165,7 +164,7 @@ who allowd to view it
 
 github.com/hirezio/the-princess-guards
 
-## Victor S.  Upgrading Enterprise Angular Apps
+## Upgrading Enterprise Angular Applications
 
 Large Business AngularJS Apps
 
@@ -250,11 +249,11 @@ upsides
 downsides
 - nuanced
 
-tomorrow
+slide tomorrow
 
 leanpub.com/ngupgrade
 
-## Progrees: Building EmotiNG
+## [Building EmotiNg - JEN LOOPER, TARA MANICSIC, and TJ VANTOLL](https://www.youtube.com/watch?v=j2S5OrMUj9g)
 
 Emoji as a Service
 
@@ -279,7 +278,7 @@ Angular + Firebase + Kendo UI (charts)
 
 www.nativescript.org
 
-## Chuck: Angular Template Language Service
+## [Using the Angular Template Language Service - CHUCK JADZEWSKI](https://www.youtube.com/watch?v=ez3R0Gi4z5A)
 
 New Angular Language Services
 
@@ -330,7 +329,7 @@ Future
 - Improved diagnostics
 - Support in more editors
 
-## Kara: Form Validation
+## [Angular Form Validation - KARA ERICKSON](https://www.youtube.com/watch?v=kM5QBOWrUVI)
 
 - overview
 - demo (today)
@@ -383,7 +382,8 @@ myChain(ctrl: AbsCtrl): ValidatorChain {
 
 Real-time async validation w/ firebase
 
-## Uri S.: Breaking the eyes
+## [Breaking The Eyes - URI SHAKED](https://www.youtube.com/watch?v=MMxJe4W1P4A)
+
 accessibility
 - not just blind people
 - keyboard, screen readers
@@ -396,8 +396,11 @@ role="button"
 - Use tabindex, role, etc.
 - Test your app as a visually challenged person
 
-## Addicted to AngularJS?
-Pete, Geooge
+## Super TypeScript II Turbo – FP Remix
+
+## [Reducing package size and complexity with NgModule - JAMES DANIELS](https://www.youtube.com/watch?v=Q6tfr23fS98)
+
+## [Addicted to AngularJS? - PETE BACON DARWIN and GEORGE KALPAKAS](https://www.youtube.com/watch?v=RyY8Brjs-Hg)
 
 We love AngularJS
 - 10x less code
@@ -453,7 +456,8 @@ Next
 - Lazy loading Angular/AngularJS
 - less boilerplate/Better tooling
 
-## Jeff Cross: Angular Pre-rendering for SEO, speed and happy users
+## [Angular Pre Rendering for SEO, Speed, and Happy Users - JEFF CROSS](https://www.youtube.com/watch?v=oXt-d2qG2po)
+
 PatricJSing
 
 Pre-Rendering
@@ -532,7 +536,8 @@ Don't render interactive view vs Record&Replay
 
 documentation on angular.io coming soon
 
-## Alyssa: bootstrap
+## [Giving Bootstrap the Boot - ALYSSA NICOL](https://www.youtube.com/watch?v=34qOyGf8LEo)
+
 Twitter bootstrap
 66 !important by default
 
@@ -543,7 +548,7 @@ Options
 A Complete Guide to Flexbox
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
-## Jason Aden: Packaging Angular Libraries
+## Packaging Angular Libraries
 
 Ecosystem
 - Components are the cornerstone
@@ -647,7 +652,7 @@ goo.gl/AMOU5G
 
 material2 beta3 w/ FESM!
 
-## Doguhan: Do More with Less JavaScript
+## [Do More with Less - DOGUHAN ULUCA](https://www.youtube.com/watch?v=Sd1aM8181kc)
 
 too many stacks
 
@@ -655,7 +660,7 @@ sticks default, best practices
 Angular + npm + TypeScript = any tasks
 @doluca
 
-## Key Snyder: Create and Attend Meetups
+## [Create and Attend Meetups - KEN SNYDER](https://www.youtube.com/watch?v=siGPF6Eng5A)
 
 Why Meetups
 
@@ -676,7 +681,7 @@ Advertise
 
 Attends
 
-## Shmuela: ngGirls
+## [ngGirls Just Want to Have Fun - SHMUELA JACOBS](https://www.youtube.com/watch?v=DTBCJ92FDUI)
 
 Breaking Bias
 
@@ -684,7 +689,8 @@ ngFirls organize over the world
 @AngularGirls
 ng-girls.org
 
-## Bred McGowen: Firebase and GCF 
+## [Firebase and Google Cloud Functions: Serverless Peanut Butter and Jelly - BRET MCGOWEN](https://www.youtube.com/watch?v=kG71Hg9cUhQ)
+
 @bretmcg
 
 What is serverless
@@ -718,9 +724,9 @@ firebase deploy --only functions
 
 spin-up for first request
 
-bit.ly/ngconf-functions
+http://bit.ly/ngconf-functions
 
-## Stephen: Best Practice
+## Best Practice
 
 https://angular.io/styleguide
 
@@ -772,7 +778,7 @@ decide browsers to support
 
 - es6/reflect, rs7/reflect -> no needed on AoT
 
-## Panel
+## [NG Conf2017 - Angular Team Panel](https://www.youtube.com/watch?v=rboo-s9yq8s)
 
 - CLI
   - shared module: coming
@@ -799,6 +805,5 @@ decide browsers to support
   - next
     - in source code
 - Enterprise use-case
-- Contribution
+- First contribution
   - Small fix to doc
-
