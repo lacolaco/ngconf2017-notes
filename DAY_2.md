@@ -89,6 +89,8 @@ Rob
 ## [Turbocharge Your Angular Testing Workflow - Victor Mejia](https://www.youtube.com/watch?v=wj3dStoEhso)
 
 ## [Interactive video apps with Videogular2 - RAUL JIMENEZ HERRANDO](https://www.youtube.com/watch?v=1J0uQCj0Zm8)
+http://slides.com/elecash/interactive-video-apps-with-videogular2#/
+
 
 ## [Diving into TypeScript - Dan Wahlin & John Papa](https://www.youtube.com/watch?v=i3iNDdshgrc)
 

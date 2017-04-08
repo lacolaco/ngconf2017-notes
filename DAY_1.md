@@ -198,7 +198,81 @@ ngworld -p tsconfig.json && open world/index.html
 
 ## [Creating VR Experiences with Angular and WebGL - AUSTIN MCDANIEL](https://www.youtube.com/watch?v=L_eQKnl8sao)
 
+VR with Angular
+
+#ngPanda
+@amcdnl
+
+
+interaction
+- punch card
+- keyboard
+- mouse
+- touch
+
+VR is the next evolution
+
+WebVR (WebGL)
+2014-
+
+Same Problems, different story
+- Interaction event: click, keyboard, touch
+- Viewport: window resize
+- Life cycle: init, render, destroy
+- Animations
+- Dataflow
+
+Challenges
+- Desktop//Mobile VR
+- Head tracking
+- Gesture
+- Voice Recognition for Input
+- Shaders
+
+HOPE
+- a-frame
+  - WebGL markup
+
+in Angular
+
+Custom  Renderers!
+- Web
+- Mobile Native
+- Desktop Native
+- Server-side
+
+abstracted DOM elements
+
+Override DOM Renderer
+
+```
+createElement(obj) {
+  // if object === webgl don't render
+}
+```
+
+```
+<ngx-renderer>
+  <ngx-orbit-controls>
+  <ngx-scene>
+    <ngx-sphere *ngFor>
+```
+
+Apply the stereoscopic filters
+
+WebVR Polyfills
+
+
+VR emulator Chrome extension
+
+Next
+- Better Render Ref.
+- Native Compilation?
+  - into Headset native
+
 ## [Module vs Module - DEBORAH KURATA](https://www.youtube.com/watch?v=ntJ-P-Cvo7o)
+
+ES2015 Modules vs Angular Modules
 
 ## [Embrace Component Tranquility - JUSTIN SCHWARTZENBERGER](https://www.youtube.com/watch?v=d7fLYenKy-I)
 
