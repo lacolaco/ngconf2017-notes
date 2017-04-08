@@ -82,8 +82,42 @@ Rob
   - special web worker
   - @angular/service-worker experimental ,CLI
 
+## [Building a roboarmy with Angular - Sebastian Witalec](https://www.youtube.com/watch?v=RE7m-BcGukQ)
 
-## DiY Angular Compiler (Workshop)
+## [RxJS: The Good Parts - Christopher Gosselin & Daniel Figueiredo Caetano](https://www.youtube.com/watch?v=TszoFCFydiM)
+
+## [Turbocharge Your Angular Testing Workflow - Victor Mejia](https://www.youtube.com/watch?v=wj3dStoEhso)
+
+## [Interactive video apps with Videogular2 - RAUL JIMENEZ HERRANDO](https://www.youtube.com/watch?v=1J0uQCj0Zm8)
+
+## [Diving into TypeScript - Dan Wahlin & John Papa](https://www.youtube.com/watch?v=i3iNDdshgrc)
+
+## [Using Components in Angular 1.5 - Jennifer Bland](https://www.youtube.com/watch?v=7eQbQN-Dzm0)
+
+## [Powering Content Driven Applications with the World’s Most Popular CMS - ROY SIVAN](https://www.youtube.com/watch?v=-PxlDHSgXQY)
+
+## [Alexa, create a voice activated chat bot - Terence Carroll](https://www.youtube.com/watch?v=rq23g0YoYGg)
+
+## [Docker: What Every Angular Developer Should Know About It! - Dan Wahlin](https://www.youtube.com/watch?v=socWfhPJptE)
+
+## [The day I met Steve - ALYSSA NICOL](https://www.youtube.com/watch?v=tfw3bhaDbsA)
+
+## [FormControl Freaks: Redux Edition - Daniel Figueiredo Caetano & Renee Vrantsidis](https://www.youtube.com/watch?v=vxJUBgTsLgs)
+
+## [TypeScript: What’s New in 2.2 - Daniel Rosenwasser](https://www.youtube.com/watch?v=0Q1lQKE2qbI)
+
+## [Voice User Interfaces with Angular - JEREMY WILKIN](https://www.youtube.com/watch?v=XG4-UsmM2C0)
+
+## [Firebase:Cloud Functions Workshop - JASON DOBRY](https://www.youtube.com/watch?v=QVAkTFiTr34)
+
+## [PrimeNG: Native UI Components for Angular - Kito Mann](https://www.youtube.com/watch?v=yzhARGULsVQ)
+
+## [From Inactive to Reactive with ngrx   Brandon Roberts & Mike Ryan](https://www.youtube.com/watch?v=cyaAhXHhxgk)
+
+## [Everything is a plugin! Mastering webpack from the inside out - Sean Larkin](https://www.youtube.com/watch?v=4tQiJaFzuJ8)
+
+## [DiY Angular Compiler - URI SHAKED](https://www.youtube.com/watch?v=QQ2plVD0gDI)
+
 https://docs.google.com/presentation/d/1N2FrwCnsnMO9_4w3QtnTMdaBtXXQdvAceXbk9_pEY9E/preview?slide=id.p
 
 - source-map-explorer
@@ -249,8 +283,9 @@ function View_AppComponent_Host_0(l:any):import1.ɵViewDefinition {
 }
 ```
 
-## PWA by Maxim
-Automatic Progress Web Apps using Angular Mobile Toolkit
+## [Angular Material 2 Workshop - Elad Bezalel & Paul Gschwendtner](https://www.youtube.com/watch?v=NiCoR7cK9JI)
+
+## [Automatic Progressive Web Apps using the Angular Mobile Toolkit   Maxim Slanikov](https://www.youtube.com/watch?v=ecu1vAO23ZM)
 
 - Milestones of the Web
 Static -> Dynamic -> AJAX -> Responsible -> PWA
@@ -365,7 +400,12 @@ Automatic PWA
 }
 ```
 
-## Build Measure Machine Lean with Angular
+## [Angular and GraphQL – A modern API for a modern Platform - Uri Goldshtein](https://www.youtube.com/watch?v=rb5i8Bs7-k0)
+
+## [When You Can’t Use the Word “BIG BANG” - ASIM HUSSAIN](https://www.youtube.com/watch?v=4p1jG2QNc4U)
+
+## [Build, Measure, and Machine Learn with Angular - Anna Karpacheva & Sumit Arora](https://www.youtube.com/watch?v=P_FSpwfERAg)
+
 Rangle.io
 
 Build/Measure/Learn cycle
@@ -392,8 +432,11 @@ Personalization: GA
 Machine Learning
 Beacon to custom target -> Database
 
-## Internationalization 
-Oliver
+## [The Memory Leak Brain Drain – Workshop - Jon Boyd](https://www.youtube.com/watch?v=nS53gCp2swc)
+
+## [Kick Your Components up a Notch with Directives BAM!   Mike Brocchi](https://www.youtube.com/watch?v=VkfHZiMqEd4)
+
+## [Lost in Translation - Oliver Combe](https://www.youtube.com/watch?v=dihyu1a2bPc)
 
 What can Angular do for you?
 
@@ -460,3 +503,5 @@ Translation Spreadsheet
 - Google translate
 
 https://docs.google.com/presentation/d/1l7kr_OdSxiobAVkTrMG-LGxqsJcj9Fd1zJTNpVXSu7A/edit
+
+## [Step by Step   Improving Startup Performance with Lazy Loading in Angular - Manfred Steyer](https://www.youtube.com/watch?v=8VLYjt81-fE)
