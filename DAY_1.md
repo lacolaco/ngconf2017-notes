@@ -272,9 +272,239 @@ Next
 
 ## [Module vs Module - DEBORAH KURATA](https://www.youtube.com/watch?v=ntJ-P-Cvo7o)
 
-ES2015 Modules vs Angular Modules
+ES2015 Module vs Angular Module
+
+Lazy loading
+
+JS problem: Namespaces, Code organization
+- AngularJS Module
+- TypeScript Module
+- ES2015 Module
+- Angular Module
+
+ES2015 Modules
+- simple code file
+  - export 
+  - import
+- micro
+
+Angular Module
+- macro
+- defines components, dependencies
+- more modules: feature modules
+  - AppModule
+- Angular Module is a ES2015 Module
+
+Components depenedency
+
+all component,pipe in AppModule
+
+- declarations: [...]
+- bootstrap: [AppComponent]
+  - find in index.html
+- providers:[ProductService]
+  - application wide injector
+- imports: [BrowserModule, ...]
+
+ES2015 import & Angular imports
+
+RouterModule
+- Directives (declarations, exports)
+- Services (providers)
+  - not provided by forChild()
+
+exports
+- declared stuff for other modules
+
+Feature modules
+- particular feature area
+- still provides to application wide injector
+- CommonModule: ngIf, ngFor
+  - BrowserModule has 
+
+add new features modules...
+Duplicated components and imports
+-> SharedModule
+
+SharedModule
+- StarComponent
+- CommonModule ->
+- FormsModule
+
+Angular Modules
+- Organize the pieces of out app: declarations
+- Extends out app with capability from external lib: imports array
+- Provide a template resolution environment: ngFor, ngIf, ...
+- Aggregate and re-export
+- Provide config for compiler
+- Loaded eagerly or lazy
+
+Lazy but fast
+- first time for bootstrap
+- small bundle
+
+Preparing for Lazy Loading
+- Use a feature module
+  - lazy load is based on module level
+- Group routes under a single parent
+  - { path: products, children: [...] }
+- Don't import the module in another module
+  - eliminate all ES2015 importing
 
 ## [Embrace Component Tranquility - JUSTIN SCHWARTZENBERGER](https://www.youtube.com/watch?v=d7fLYenKy-I)
+
+Componentization
+
+Angular Component model
+
+Angular Component = Markup + Logic + Style
+
+Component: Web Components, Polymer, React
+
+Component architects
+
+Player cards
+
+Component = styles, Input/Output, Template
+
+Componenize all the things -> cannot
+
+Darkness fall
+
+price we pay when we build component : Component Tax
+
+An Angular Component
+- Rendering Engine
+   - Deps, CD
+- Execution and Tracking
+- Pre-run Compilation
+- JS payload adding
+
+The Payload Tax
+- bootsrrapping
+- Lazy loading
+- display decitions
+- change detection
+
+The Execution Tax
+
+deciding to make a component
+- We need that payload
+- We want that execution
+
+becoming component architect
+
+custom element selector pattern 
+- write many container components
+
+The Container Element Tax
+- Custom Element is not block level by default
+  - :host: { display: block; }
+- not semantic `<section>` wrapper
+- -> JS Payload
+
+Component Selectors
+- element
+- class
+- attr
+- attr name and value
+- :not() selector
+
+```
+<section owHeroList>
+```
+
+```
+@Component({
+  selector: [owHeroList],
+  template: `
+    <h2>Heroes</h2>
+    <ng-content></ng-content>
+  `
+})
+```
+
+**Component footprint gets smaller**
+  - no styles
+  - no container
+
+Component/**Directive** Selectors
+
+Component Composition
+- The Decision and Presentation Pattern
+
+Decision Maker + Presenters
+- Decision Maker
+  - Parent Component: Load Data, Change Data
+- Presenters
+  - Child Component: @Input/@Output, OnPush
+  - easy to reuse
+
+The Tree Coupling Tax
+
+CardListComponent: Decision
+```
+@Component({
+  selector: ow-card-list,
+  template: <ow-card *ngFor=".." [card]="card" (upvote)="...">
+})
+class {
+  cards: [...];
+  upvote() {};
+}
+```
+
+CardComponent: Presenter
+```
+@Component({
+selector: 'ow-card'
+template: `
+<h2>{{card.name}}
+<button (click)="upvote.emit()" <---
+`
+})
+```
+
+new UpvoteButton
+
+```
+@Component({
+selector: 'ow-upvote'
+template: `
+<button (click)="upvote.emit()" <---
+`
+})
+```
+
+middle (upvote) is only for pass-thru. we don't have pay that tree coupling task
+
+Trade-off
+
+a option: CardService in UpvoteComponent (injection)
+
+Challenge with Services: each component has own services
+- not be coupled
+- harmony
+
+it's like Redux patterns
+- Store in all component
+
+Eliminate Tree-coupling tax
+- Decision/Presentation
+- Services
+- Oservables
+- Redux
+
+**Atomic Design** methodology
+- Page View
+  - Composition Component
+    - native DOM + attribute selector
+      - aside[owAgentList], article[owMap] 
+  - Global Component
+- Service with Observables
+- Decision and Presentation
+
+Componentize tax balance
 
 ## [Animations in Angular 4.0.0 - MATIAS NIEMELA](https://www.youtube.com/watch?v=Oh9wj-1p2BM)
 
