@@ -847,7 +847,7 @@ Google runs on Angular
 Enterprise 2 handreds
 Goal by end 2017
 Automatic Closure to TypeScript (deprecated typed js)
-Material 1 + Material 2 (merge)
+Material 1 + Material 2 (works together)
 Google Angular Course (movie) 59 instructors, 3000 attendees, 90 offices
 
 Public Face upgrading
