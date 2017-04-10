@@ -1113,6 +1113,24 @@ Steps we can take today
 
 ## [ng-STEAM - JOE SKEEN and GWEN SKEEN](https://www.youtube.com/watch?v=39vCAvW0a7E)
 
+- Gwen: 5 years old Angular Developer
+
+STEM
+- Science Technology Engineering Math
+
+STEAM
+- Science Technology Engineering Angular Math
+
+Kids creativity
+- using scratch
+
+https://studio.code.org
+- helping kids to learn program
+
+Angular QuickStart Plunker
+
+Interactive examples are fun
+
 ## [The Memory Leak Brain Drain - JON BOYD](https://www.youtube.com/watch?v=cWHR-Eqe8q4)
 
 ## [There and Back Again  a developer’s tale - JACOB TURNER](https://www.youtube.com/watch?v=IFblumxIFW8)
