@@ -1091,6 +1091,26 @@ Steps we can take today
 
 ## [Mischief Maker - LUKAS RUEBBELKE and ROGER TIPPING](https://www.youtube.com/watch?v=kW37RU5k8xM)
 
+- application developing stage
+- enlighten
+  - have a MIDI Keyboard, use navigator.requestMIDIAccess()
+- knowledge
+  - learn RxJS and Web MIDI API
+- understand
+  - raw data to view make senses
+- manifest 
+  - "make music together"
+- perceive: notice
+  - perceive the impact of out actions
+  - we must ask the universe when we do something what is the impact, what are you trying to tell us
+  - you may want to record
+- reflect
+  - play the recorded audio
+- evolve
+  - multiple recording
+- review
+  - singing
+
 ## [ng-STEAM - JOE SKEEN and GWEN SKEEN](https://www.youtube.com/watch?v=39vCAvW0a7E)
 
 ## [The Memory Leak Brain Drain - JON BOYD](https://www.youtube.com/watch?v=cWHR-Eqe8q4)
