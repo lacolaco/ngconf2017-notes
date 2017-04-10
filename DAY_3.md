@@ -396,7 +396,7 @@ role="button"
 - Use tabindex, role, etc.
 - Test your app as a visually challenged person
 
-## Super TypeScript II Turbo – FP Remix
+## [Super TypeScript II Turbo – FP Remix - Sean May](https://www.youtube.com/watch?v=9oVKjZrgXmU)
 
 ## [Reducing package size and complexity with NgModule - JAMES DANIELS](https://www.youtube.com/watch?v=Q6tfr23fS98)
 
@@ -548,7 +548,7 @@ Options
 A Complete Guide to Flexbox
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
-## Packaging Angular Libraries
+## [Packaging Angular - Jason Aden](https://www.youtube.com/watch?v=unICbsPGFIA)
 
 Ecosystem
 - Components are the cornerstone
@@ -726,7 +726,7 @@ spin-up for first request
 
 http://bit.ly/ngconf-functions
 
-## Best Practice
+## [Best Practice - STEPHEN FLUIN](https://www.youtube.com/watch?v=hHNUohOPCCo)
 
 https://angular.io/styleguide
 
