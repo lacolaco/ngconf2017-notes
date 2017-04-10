@@ -1002,6 +1002,93 @@ Be thoughtful about
 
 ## [Back from the past: A tale of helping others upgrade from Angular 1.x - SERGIO CRUZ](https://www.youtube.com/watch?v=FFhJSkI35U8)
 
+My history of upgrading AngularJS to Angular
+
+2013
+- first AngularJS
+  - download AngularJS source code
+  - add script tag to a page
+  - write
+  - profit?
+
+AngularJS Awesome in 2013
+- Idea to conception in no time
+  - protopyping
+- Great separation of concerns
+- Similar MVC as backend code
+  - dependency injection
+
+in 2017
+- write client-side app
+
+2017
+- install the CLI
+- generate project
+- hello typeScript
+- npm all the thing
+- no script tag
+  - automated by CLI
+- help(?)
+
+This happens All the time with new Angular developers
+
+Problem: modern JS apps
+- More tooling: Node.js Webpack, ..
+- Modern languages: ES2015m TypeScript, ...
+- Mo limited to browsers
+- All of this while
+  - Backwards compatible
+  - learning best practieve as we go
+
+- Not as simple as script tags anymore
+- Dev onboarding is more difficult
+- Lot' to gain, but comes at a price
+
+JavaScript has gotten harder
+
+Common difficulties when upgrading
+
+TypeScript?
+  - don't have to, but most people use
+
+Template syntax?
+  - `[]`, `()`, `*`
+
+CLI?
+  
+Actual challenges I ran into
+- Mixed with backend: Rails + AngularJS
+- CoffeeScript
+- Bower
+- Grunt
+
+We wanted to undertand 
+- so we used science
+
+Upgrading process
+
+Pain points: survey by jeffwhelpley
+- Time & priority: stopping developing new features
+- Business incentive
+- Team proficiency
+  - developers didn't want to learn new framework
+- 3rd party libs
+- All the tooling
+
+The new Angular syntax is not the reason why some people aren't upgrading
+
+How to go about it Angular
+
+Steps we can take today
+- Component-based
+  - move from controllers and directives
+- Write full SPAs
+  - stop container of the website
+- install deps with npm
+  - install
+  - webpack
+- Use TypeScript
+
 ## [Mischief Maker - LUKAS RUEBBELKE and ROGER TIPPING](https://www.youtube.com/watch?v=kW37RU5k8xM)
 
 ## [ng-STEAM - JOE SKEEN and GWEN SKEEN](https://www.youtube.com/watch?v=39vCAvW0a7E)
