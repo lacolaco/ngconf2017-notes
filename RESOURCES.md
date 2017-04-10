@@ -62,17 +62,17 @@
 - [Using the Angular Template Language Service - CHUCK JADZEWSKI](https://www.youtube.com/watch?v=ez3R0Gi4z5A)
 - [Angular Form Validation - KARA ERICKSON](https://www.youtube.com/watch?v=kM5QBOWrUVI)
 - [Breaking The Eyes - URI SHAKED](https://www.youtube.com/watch?v=MMxJe4W1P4A)
-- Super TypeScript II Turbo – FP Remix
+- [Super TypeScript II Turbo – FP Remix - Sean May](https://www.youtube.com/watch?v=9oVKjZrgXmU)
 - [Reducing package size and complexity with NgModule - JAMES DANIELS](https://www.youtube.com/watch?v=Q6tfr23fS98)
 - [Addicted to AngularJS? - PETE BACON DARWIN and GEORGE KALPAKAS](https://www.youtube.com/watch?v=RyY8Brjs-Hg)
 - [Angular Pre Rendering for SEO, Speed, and Happy Users - JEFF CROSS](https://www.youtube.com/watch?v=oXt-d2qG2po)
 - [Giving Bootstrap the Boot - ALYSSA NICOL](https://www.youtube.com/watch?v=34qOyGf8LEo)
-- Packaging Angular
+- [Packaging Angular - Jason Aden](https://www.youtube.com/watch?v=unICbsPGFIA)
 - [Do More with Less - DOGUHAN ULUCA](https://www.youtube.com/watch?v=Sd1aM8181kc)
 - [Create and Attend Meetups - KEN SNYDER](https://www.youtube.com/watch?v=siGPF6Eng5A)
 - [ngGirls Just Want to Have Fun - SHMUELA JACOBS](https://www.youtube.com/watch?v=DTBCJ92FDUI)
 - [Firebase and Google Cloud Functions: Serverless Peanut Butter and Jelly - BRET MCGOWEN](https://www.youtube.com/watch?v=kG71Hg9cUhQ)
-- Best Practice
+- [Best Practice - STEPHEN FLUIN](https://www.youtube.com/watch?v=hHNUohOPCCo)
 - [NG Conf2017 - Angular Team Panel](https://www.youtube.com/watch?v=rboo-s9yq8s)
 
 
