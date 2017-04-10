@@ -200,7 +200,7 @@ ngworld -p tsconfig.json && open world/index.html
 
 VR with Angular
 
-#ngPanda
+`#ngPanda`
 @amcdnl
 
 
@@ -508,19 +508,279 @@ Componentize tax balance
 
 ## [Animations in Angular 4.0.0 - MATIAS NIEMELA](https://www.youtube.com/watch?v=Oh9wj-1p2BM)
 
-Angular 4.1
-- `animation()` input variables
-- `query()`/`queryAll()`
-- programmatic animations
-AnimationBuilder
- frame-by-frame control
-.build(animations)
-player.play(),pause(),finish(),onDone(),setPosition
-- route animations
+http://yom.nu/ng-conf-2017
+
+Demo: yom.nu/ng-conf-2017-demo
+
+4 years works on Angular
+
+- New feeatues
+- Everything is here 4.1
+- Demo
+
+@angular/animations
+- animations specific code
+- refactored fully dynamic
+
+Migration from 2
+- import style,animate,transition, trigger from /animations
+- import BrowserAnimationsModule
+
+a ton of changes not external API but internal
+- 100% run time handled which allows for a lots of cool things
+
+AnimationsModule
+- BrowserAnimationModule: for users (runtime)
+- NoopAnimationsModule: for testing (disable all animations)
+
+SYstemJS
+load all three bundles
+- animations.umd
+- animations-browser.umd
+- platform-browser-animations.umd
+
+basic example
+- fade in/out
+
+special property `@` symbol
+
+```html
+<div [@fade]="active ? 'in' : 'out'">
+  hello there
+</div>
+<button (click)="toggleActive()">Toggle</button>
+```
+
+```
+animations: [
+  trigger('fade', [...])
+]
+```
+
+import an animation as a module
+
+```
+animations: [fadeAnimations]
+```
+
+```
+export fadeAnimations = trigger('fade', [
+  transition('* => in', [
+    style({opaticy: 0}),
+    animate(100, style({opacity: 1}))
+  ]),
+  transition('* => out', [
+    animate(100, style({opacity: 0}))  
+  ])
+])
+```
+
+Angular knows opacity is 1 before the animation started
+
+Animation Callback Events
+
+```html
+<div [@fade]="active ? 'in' : 'out'"
+     (@fade.start)="onStart($event)"
+     (@fade.done)="onDone($event)">
+  hello there
+</div>
+```
+
+$event
+- element: any (div)
+- fromState: string (in|out)
+- toState: string (in|out)
+- totalTime: number (1000)
+- triggerName: string (fade)
+- phaseName: string (start|done)
+
+building animation()s
+- Reusable animation
+
+`animation()` function
+- defines a reusable animation as a module
+- input variables
+- transition() uses it
+- sub animations
+  - `animateChild()` is used to invoke it
+
+Refactor `@fade` animation
+- fade in/out is are common
+
+```ts
+export const fadeIn = animation([
+  style({opacity: 0}),
+  animate(1000, style({ppacity: 1}))
+])
+export const fadeOut = animation([
+  animate(1000, style({opacity: 0}))
+])
+```
+
+Use 
+
+```ts
+trigger('fade', [
+  transition('* => in', animateChild(fadeIn)),
+  transition('* => out', animateChild(fadeOut))
+])
+```
+
+Dynamic animation: input variables coming
+- animateChild accepts input params
+- animateChild(animation, {params: value})
+
+```ts
+export const fadeIn = animation([
+  style({opacity: '$start'}),
+  animate(1000, style({opacity: '$end'}))
+], { end: 1}) // default value
+
+export const fadeOut = animation([
+  animate('$duration', style({opacity: 0}))
+], { duration: 1000 })
+```
+
+
+```ts
+trigger('fade', [
+  transition('* => in', animateChild(fadeIn, { start: 0})),
+  transition('* => out', animateChild(fadeOut, { duration: '$customTime'}))
+], { customTime: '2s' }) // valiables for variables
+```
+
+how do you get data into a transision
+
+```ts
+<div [@fade]="exp"></div>
+
+@class DemoFadeComponent {
+  exp = 'in'
+}
+```
+
+from 4.1: object passing for passing params
+
+```ts
+<div [@fade]="exp"></div>
+
+@class DemoFadeComponent {
+  exp = { value: 'in', customTime: 1000};
+}
+```
+
+`query()` animations
+
+query() and queryAll()
+- Collects inner items
+- Uses querySelector/querySelectorAll
+- Can detect enter/leave & active animations
+
+```html
+<div class="contianer" *ngIf="active" @reveal> // no expression
+  <h2>title</h2>
+  <p>text</p>
+  <p>text</p>
+  <img/>
+</div>
+```
+
+Group: parallel
+
+```ts
+// 1. shrink the container to be small
+style({overflow: 'hidden', height: 0}) // @ container
+// 2. hide all inner children
+queryAll('*', style({opacity: 0}) // @ children
+// 3. animate the container and inner children
+group([
+  animate('0.5s', style({ height: '*'}), // container
+  queryAll('*', animate(500, style({opacity: 1}))) // children
+])
+```
+
+Programmatic animations
+
+`AnimationBuilder`
+- Build animation on the fly: out of `@Component`
+- Player access: lower APIs exposed
+- frame-by-frame control
+
+```ts
+class Cmp {
+  constructor(private builder: AnimationBuilder) {}
+
+  start(percentage) {
+    const definition = this.builder.build([
+      style({width: 0}),
+      animate(1000, style({width: (percentage * 100) + '%'}))
+    ]);
+    const player = definition.create(element);
+    return player
+  }
+}
+```
+
+- player.play(),pause(),finish(),onDone(),setPosition(percentage),destroy()
+
+FAQ feature: route animations
+
 Animations + Routes
-RouteOutlet has the data
-Transitions = route changes
-div [@routerAnimations]="fun(r)" > router-outelt #r="outlet"
+- 2 child routes and 1 parent route to control them
+- have to access to route-outlet
+  - RouteOutlet has the data: active route, and custom metadata within the route
+- Transitions = route changes
+- No extensions for router edge case: Use basic APIs
+
+```html
+<div [@routerAnimations]="prepareRoute(r)">
+  <router-outlet #r="outlet"></router-outlet> 
+</div>
+```
+
+```ts
+prepareRoute(r: RouterOutlet) {
+  return r.activeRoute ? r.activeRoute.config.animation: '';
+}
+```
+
+```ts
+const ROUTES = [
+  {
+    path: '',
+    component: IndexPage,
+    animation: {
+      value: 'home',
+      // more data
+      left: '100%'
+    }
+  },
+  {
+    path: 'about',
+    component: AboutPage,
+    animation: {
+      value: 'about',
+    }
+  },
+]
+```
+
+```ts
+trigger('routerAnimations', [
+  transition('home => about', group([ // home => about specific animation
+    query('home-page', [...]),
+    query('about-page', [...]),
+  ])),
+  transition('* => *', [ // all routing
+    query(':enter', [...]),
+    query(':leave', [...]),
+  ]),
+])
+```
+
+Remember: Angular 4.1
+
 yom.nu/ng-conf-2017
 
 ## [Keeping the Sand Out of Your Eyes  No Sandbox, No Problem - TIM EHAT](https://www.youtube.com/watch?v=Lkda4xNPi5M)
