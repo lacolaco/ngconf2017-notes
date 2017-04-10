@@ -815,6 +815,191 @@ Hack your app
 
 ## [Thoughtful Component Design - JEREMY ELBOURN and MILES MALERBA](https://www.youtube.com/watch?v=0BikjL858OQ)
 
+https://goo.gl/TvRLlu
+
+Angular Material
+- Projected by Angular Team
+- High quality set of UI component
+- Based on Material Design Spec
+- Use best practice
+
+
+1 to 2
+- 2.5 years
+- 50+ components
+- 5657 commits
+
+We've learned a lot to building component
+- component design practice
+
+Thoughtful use of custom elements for your angular components (and when not to use custom elements)
+
+Angular custom elements for wraps stuffs and put it anywhere
+- `md-input-container` style
+- users still can access to the native elements
+- avoid hiding element inside of the template in a custom element
+
+```html
+<md-input-container>
+  <input required type="email">
+</md-input-container>
+
+<button md-button>SAVE</button>
+```
+
+Same practice for complex components
+- Keep composition of native elements 
+
+```html
+<nav md-tab-nav-bar ...>
+  <a md-tab-link ...>
+    {{ link.label }}
+  </a>
+</nav>
+```
+
+Other benefits
+- In Material Design, Buttons handles click actions and navigation links 
+- accessibility for screen reader users
+  - need to add right roles and aria attrs
+
+Not Good 
+```html
+<md-button (click)="...">SAVE</md-button>
+<md-button [href]="...">VIEW</md-button>
+```
+
+Good: native accessibilty without additional attrs
+```html
+<button md-button (click)="...">SAVE</button>
+<a md-button [href]="...">VIEW</a>
+```
+
+Other benefits
+- make components simple
+
+Not Good
+```html
+<md-input></md-input>
+```
+
+- need to pass-thru inputs from `md-input` to inner `input`
+  - larger generated code by compiler
+
+Good
+```html
+<md-input-container>
+  <input required type="email">
+</md-input-container>
+```
+
+Benefits
+- Familiar APIs!
+- Accessibiity win!
+- Simpler implementaion!
+
+Thoughtful COmponent Composition
+
+Menu view
+- 2 parts
+  - toggle button
+  - menu panel
+- how to write the template
+
+Not Good
+- Encapusulated by md-menu
+  - how to pass the class to inner trigger button?
+  - another class for panel to put on custom shadow?
+  - and and and ...
+```
+<md-menu [triggerClass]="menuSpacing" [panelClass]="panelShadow" ...>
+  <md-menu-item ...>{{opt.label}}</md-menu-item>
+</md-menu>
+```
+
+now: Split up the different parts and connect
+- Flexible
+- `mdMenuTriggerFor` directive
+
+```html
+<button md-button [mdMenuTriggerFor]="menu" ...>SETTINGS</button>
+
+<md-menu #menu="mdMenu">
+  <button md-menu-item ...>{{opt.label}}</button>
+</md-menu>
+```
+
+Mor ecomplex component approach
+- autocomplete = input + options panel
+- datepicker = input + calendar panel
+- data-table = table + sorters + paginator
+
+benefits
+- single responsibility
+- flexibility win
+- friendly to native elements
+  - interop other libs
+
+directy touchs to DOM
+
+Thoughtful DOM Interaction
+
+Use code -> Angular -> DOM: abstraction is why we use a framework
+
+how to use native web APIs not abstracted
+
+Measuring, sizing and positioning of elements
+
+Slider component: requires window width
+
+Reaching outside the Angular app
+- html dir="rtl"
+- body > Angular
+
+Server Side: Universal
+- no DOM APIs on Seriver
+
+Found: when happen Component doing on native API = 2 kinds
+- In response to user interaction
+  - Good to pre-render!
+  - No users on server
+- On initial render
+  - Needs special handling
+  - measuring something after CSS: common case
+    - Universal will provide way to do that some small snippets to fix-up that
+
+WARNING: Avoid manual templating!! 
+
+DOM
+- avoid when possible
+- use carefully if necesary
+- beware XSS
+
+The Angular Zone
+
+Thoughtful Zone Interaction
+
+Asynchronous execution context
+- even asynchronous things!
+- detect when Angular runs CD
+
+ngZone.runOutsideAngular(() => {
+  // invisible from Angular
+
+  document.body.addEventListener('scroll', () => {
+  })
+
+  requestAnimationFrame(() => {
+  })
+})
+
+Be thoughtful about
+- custom elements
+- component composition
+- DOM interaction
+- Use of Zones
+
+
 ## [Back from the past: A tale of helping others upgrade from Angular 1.x - SERGIO CRUZ](https://www.youtube.com/watch?v=FFhJSkI35U8)
 
 ## [Mischief Maker - LUKAS RUEBBELKE and ROGER TIPPING](https://www.youtube.com/watch?v=kW37RU5k8xM)
