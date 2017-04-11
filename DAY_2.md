@@ -549,6 +549,60 @@ VgFor
 
 ## [Using Components in Angular 1.5 - Jennifer Bland](https://www.youtube.com/watch?v=7eQbQN-Dzm0)
 
+angular 1.5 components for easier migration to angular 2
+
+https://github.com/ratracegrad/ngconf-components-angular15
+- master, perfect
+
+- Angular Sep 2016
+- React is repidly growing in popularity
+- Both: component-based architecture
+- AngularJS: NOT
+- AngularJS 1.5: supports for components
+
+Components in AngularJS
+- syntax-sugar for .directive()
+- replace-able by .directive()
+- Easier to create
+- Default to best practive
+- Easier to upgrade to Angular
+
+Components in 1.5
+- isolate scope by default
+- use controllers instead of link
+- automatic controllerAs
+- bindToController by default
+
+```
+app.component('models', {
+  bindings: { make: '=' },
+  templateUrl: 'models.html',
+  controller: function ModelsCtrl() {}
+})
+```
+
+New features
+- One-way data biding
+  - pass something without coming back to parent
+  - careful: passing object (actually same object)
+- Lifecycle hooks
+- Stateless components
+
+Lifecycle events
+- $onInit
+- $postLink
+- $onChanges
+- $onDestroy
+
+Component Structure
+
+Directory Structure
+- components
+
+Stateless Components
+- have no bindings
+- show HTML only
+
 ## [Powering Content Driven Applications with the World’s Most Popular CMS - ROY SIVAN](https://www.youtube.com/watch?v=-PxlDHSgXQY)
 
 ## [Alexa, create a voice activated chat bot - Terence Carroll](https://www.youtube.com/watch?v=rq23g0YoYGg)
