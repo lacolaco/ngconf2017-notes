@@ -250,6 +250,142 @@ Summary
 
 ## [RxJS: The Good Parts - Christopher Gosselin & Daniel Figueiredo Caetano](https://www.youtube.com/watch?v=TszoFCFydiM)
 
+https://github.com/danielfigueiredo/rxjs-goodparts
+
+What is RxJS
+
+How does RxJs relate to Angular
+- everywhere
+  - http  
+  - Router
+  - Output/ EventEmitter
+  - Forms
+
+Common Operators
+
+Creating observables
+- of(a, b, c): pass-multi-argument to create
+- from([a, b, c]): pass iterable to create
+
+Array-like operators
+- filter
+- map: convertion
+- reduce: only emits on complete
+- take: take X events
+  - for http: take(1)
+
+useful for browser events
+- debounce: waits X amount of time **till last one finishes** before continuing
+- throttle: waits X amount of time **between** calls
+
+combining 
+- switchMap: cancels all non finished and carries oon with current one
+  - aka flatMap
+- mergeMap: returns new one that will be used henceforth
+- zip: outputs continuously matching streams
+  - combine http requests
+- combineLatest: wheneven a change happend, take latest from all and continue on
+
+utilities
+- toArray: wait until stream is done and combines into 1 array
+- share: allows you to say at this point, whenever subscriber go from 0 to 1, use what last evaluation was
+
+errors
+- retry: will retly until no errors, or retry a bunch of times
+
+erors go through the onError channel
+
+they halt the sequence
+- on error, the stream will stop
+
+Error levels
+- class level
+- instance level
+
+Class level errors
+- swallowing errors
+
+```ts
+const source$ = Observable.catch(
+  Observable.ajax.get('http://stream1'),
+  Observable.ajax.get('http://stream2'), // fallback
+  Observable.from(local.get('default')), // fallback
+)
+```
+
+Ignoring errors
+- execute series of independent events no matter what
+- onErrorResumeNext()
+- takes in any number of observables to be executed
+
+```ts
+const source$ = Observable.onErrorResumeNext(
+  Utils.myFunction1(),
+  Utils.myFunction2(),
+  Utils...
+)
+const log = source$.subscribe(data => console.log(data))
+```
+
+Instance level errors
+- Deals with errors from a specific Observable
+- `catch` function callback
+  - like try-cache
+- Callback should return an observable
+
+- On error the source emits the observable returned from `catch`
+- 
+
+```ts
+const source$ = Observable.ajax.get(url)
+  .catch(err => Observable.from({err, errMsg: 'My error'}));
+```
+
+Finally reminder
+- you can use `finally`
+- finally vs complete callback
+- Runs after completed, regardless the output or error
+  - use-case: clean up resources
+
+```ts
+DbUtils.getData()
+  .catch(err => log(err))
+  .finally(() => socket.close())
+  .subscribe(data => socket.send(data))
+```
+
+TypeScript w/ observable
+
+generic parameters
+- `Observable<T>`
+- each operator also has its own parameters
+
+How to use `map` with types
+- receiving type
+- returning type
+
+```ts
+source$.map<Cat, Dog>(cat => {
+  return { name: cat.name, age: cat.age };
+})
+```
+
+Performance and RxJS
+
+Array operators and RxJS operators: millions data
+- [] > filter > map > reduce
+- from() > ...
+
+- Array: 0.14s
+- RxJS: 0.08s
+- No overhead
+
+Why?
+
+RxJS works like a funnel
+- Each element goes through all operators
+- Array function iterates the whole array every time <- overhead
+
 ## [Turbocharge Your Angular Testing Workflow - Victor Mejia](https://www.youtube.com/watch?v=wj3dStoEhso)
 
 ## [Interactive video apps with Videogular2 - RAUL JIMENEZ HERRANDO](https://www.youtube.com/watch?v=1J0uQCj0Zm8)
