@@ -1133,6 +1133,57 @@ Interactive examples are fun
 
 ## [The Memory Leak Brain Drain - JON BOYD](https://www.youtube.com/watch?v=cWHR-Eqe8q4)
 
+https://biznas.io/talks/jon/
+
+Memory leak
+- Memory that should be released back to the system because it's no longer needed, doesn't get released.
+
+Why?
+- Significant performance issues
+  -  degrade by time
+- Crash the browser
+- Your users are probably paying for your salary
+  - make them happy
+
+2 types of Memory leaks
+- Contrived example
+- Real ones
+
+Easy to solve leaks
+- Console API
+- Long lived rxjs subscription
+  - unsubscribe
+
+Steps to handle a real leak
+
+Chrome devtools is the best tool
+
+Timeline View
+- memory heap
+
+Allocation Timeline
+- break it down and you can look at specific chunks of your application
+- what memory was allocated
+- what memory was retained
+
+Heap snapshot
+- all the memory being used in your application at any specific time
+
+Outside of the tools
+- What actions cause the leak
+  - happenning on navigation? certain event firing? everywhere? certain screen? all browsers? specific browser?
+- Test like a real user
+  - keep app opened for 30 days
+- Remove code
+- Build a test app
+  - reproduce
+  - just the problem elements you think
+
+Still can't figure it out?
+- Just give up
+  - come to my workshop
+- Upgrade to Angular 4
+
 ## [There and Back Again  a developer’s tale - JACOB TURNER](https://www.youtube.com/watch?v=IFblumxIFW8)
 
 ## [The Little Tool That Dreams Big - HANS LARSEN](https://www.youtube.com/watch?v=f9hhzDZXWPM)
