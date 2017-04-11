@@ -84,6 +84,170 @@ Rob
 
 ## [Building a roboarmy with Angular - Sebastian Witalec](https://www.youtube.com/watch?v=RE7m-BcGukQ)
 
+@sebawita
+Jack of all Angular Master of Robots
+
+Robots
+
+Bluetooth
+
+FUnctionality is grouped into service
+- Services
+  - Characteristics
+  - Dashboard(fa00) 
+      - Speed indicator(fa06)
+      - Fuel indicator(fa1c)
+  - Weapons(fb00)
+  - Drive control(fd00)
+
+Services contain characteristics
+
+Run Bluestooth from Web Mobile
+
+Web Bluetooth
+- Chrome dev
+
+Step.0 Add web-bluetooth
+- npm install @types/web-bluetooth
+
+Step.1 Find a matching Device
+
+```ts
+let device  = await navigator.bluetooth.requiesrDevice({
+  filters: [{namePrefix: 'Mambo'}],
+  optionalServices: [serviceUUID], // interested in using
+})
+```
+
+Step.2-4 Connect an get characteristic
+
+```ts
+let server = await device.gatt.connect();
+let service = await server.getPrimaryService(serviceUUID);
+let characteristic = await service.getCharacteristic(characteristicUUID);
+```
+
+Step.5 Read/Write
+
+```ts
+const value = await characteristic.readValue();
+console.log('val: ' + value.getUint8(0));
+```
+
+```ts
+const instructions = new Int8Array([0x02, 0x32, 0xFF]);
+characteristic.writeValue(instruction);
+```
+
+Drones
+
+mambo-angular-service
+- Angular Service to control Parrot Mamo drone
+
+```ts
+this.drone = await this.mamboService.search();
+this.drone.takeOff();
+```
+
+Demo
+
+What about going beyond Chrome?
+- if you want to use on Android, iOS
+
+Bluetooth from a mobile app with NativeScript
+- web bluetooth is limited
+  - one connection
+- mobile devices: 10 devices
+
+NativeScript
+- open source framework for building truly native mobile apps and get native UI and perf
+
+4 steps
+- 0. Add nativescript-bluetooth
+- 1. Request permissions
+- 2. Scan for device
+- 3. Connect to it
+- 4. Read/Write from the Characteristic
+
+Step 0
+- `tns plugin add nativescript-bluetooth`
+
+Step 1
+
+```ts
+import bluetooth = require('nativescript-bluetooth')
+
+bluetooth.requirestCoarseLocationPermission().then(() => {
+  console.log('Location permission requested')
+})
+```
+
+Step 2
+
+```ts
+bluetooth.startScanning({
+  seconds: 3,
+  onDiscovered: (peripheral: Peripheral) => {
+    console.log('Device UUID: ' + peripheral.UUID);
+    console.log('Device name: ' + peripheral.name);
+  }
+})
+```
+
+Step 3
+
+```ts
+bluetooth.connect({
+  UUID: deviceUUID,
+  onConnected: () => {}
+  onDisconnected: () => {}
+})
+```
+
+Step 4
+
+```ts
+bluetooth.read({
+  peripheralUUID: deviceUUID,
+  serviceUUID, characteristicUUID
+}).then((result) => {})
+
+bluetooth.writeWithoutResponse({
+  peripheralUUID: deviceUUID,
+  serviceUUID, characteristicUUID,
+  value: '0x02 0x32 0xFF'
+})
+```
+
+nativescript-mip-ble
+- NativeScript plugin that allows to control a Mip robot
+
+Difficult parts: knowing
+- what commands to send
+- what services to send
+- cannot find anyone in documentaion how to use
+
+Android Developer Tools
+- Bluetooth HCI snoop log
+  - logging all the bluetooth communication
+- log to wireshark
+  - inspect all the packets
+- reverse engineering the original drone app
+
+Summary
+- Bluetooth is easy
+- Use NativeScript
+  - for Android and iOS apps support
+  - up to 10 devices
+- Use Web BlueTooth
+  - to run in Chrome on Mac and Windows and Android
+  - only **one** device
+- For WebBluetooth w/ Observables
+  - @nanekinekko/angular-web-bluetooth
+- Reverse engineering
+  - Android HCI Snoop log
+  - Together w/ Wireshark
+
 ## [RxJS: The Good Parts - Christopher Gosselin & Daniel Figueiredo Caetano](https://www.youtube.com/watch?v=TszoFCFydiM)
 
 ## [Turbocharge Your Angular Testing Workflow - Victor Mejia](https://www.youtube.com/watch?v=wj3dStoEhso)
