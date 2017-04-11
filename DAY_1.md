@@ -1186,7 +1186,108 @@ Still can't figure it out?
 
 ## [There and Back Again  a developer’s tale - JACOB TURNER](https://www.youtube.com/watch?v=IFblumxIFW8)
 
+Experience with Frameworks
+- AngularJS
+- React
+- Angular
+
+Framework journey
+
+Find a job
+- Am I Angular developer or React developer?
+- Defined myself by framework
+
+Transition
+- I'm no longer an "X developer"
+  - defined by his/her tools
+- I'm a builder
+  - uses the best tools for the job
+
+- OK: have a preference in tools
+- Not OK: be restricted by thos preferences
+- the important thing is to provide value
+- your efforts should help you accomplish goals
+
+Practice first, tools second
+
 ## [The Little Tool That Dreams Big - HANS LARSEN](https://www.youtube.com/watch?v=f9hhzDZXWPM)
+
+started on Material Project
+- help people to make great app
+- cannot solve the matter: before use Material
+- join CLI team
+
+Why CLI was created
+- all the configuration
+- all the boilerplate
+- all the different tools
+- it shouldn't be complex
+
+small tools, big dreams
+- small apps and large apps
+
+What is going on under the hood
+
+Build system in angular CLI
+
+
+ng build/serve: Parse glags
+- dev/prod
+- Code gen (prod only)
+- Lazy route
+- TypeScript 
+- Bundling (webpack)
+- ready to ship
+
+ngtools/webpack plugin
+- core of CLI
+- without cli you can use
+
+ngtools/webpack - LazyRoute
+- loadChildren
+- Create 2 bundles
+  - 0.bundle.js (MyModule, OtherModule, RouterComp1)
+  - 1.bundle.js (Module2)
+- 0 will be smaller
+
+ngtools/webpack - Refactoring
+- modifying code
+- templateUrl, styleUrls
+  - change to `require()` code w/ relative path
+  - resolved by webpack
+  - SCSS -> CSS
+- for AoT: we don't need decorator and reflect-metadata
+  - remove decorators
+  - `static ctorParamerers = [ {type: MyService} ]`
+- for AoT: bootstrapping
+  - replace `platformBrowserDynamic().bootstrapModule()` to `platformBrowser().bootstrapModuleFactory()` 
+
+ng eject
+- CLI doesn't fit
+- keep your configuration
+- ng eject
+- ng eject --aot
+- ng eject --prod --locale=fr
+- please eject responsibility
+
+CLI 1.0.0 Final
+
+coming up in the 1.x 
+- not just fixing
+  - improving
+- size
+  - reduce the size your bundles, 20%
+  - make AoT building faster, save dev/prod time
+  - Error messaging
+    - `Error: SampleModule is not an NgModule`
+    - show how to do
+
+2.0?
+- Plugins
+- Libraries that can be reused by other tools
+- Custom Templates Builds, Tests, ...
+- Same small tool, interface, 
+- Dreaming even bigger
 
 ## [The Angular Compiler 4.0 - TOBIAS BOSCH](https://www.youtube.com/watch?v=RXYjPYkFwy4)
 
