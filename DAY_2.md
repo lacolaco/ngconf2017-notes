@@ -440,6 +440,110 @@ prevent bad commits with husky
 ## [Interactive video apps with Videogular2 - RAUL JIMENEZ HERRANDO](https://www.youtube.com/watch?v=1J0uQCj0Zm8)
 http://slides.com/elecash/interactive-video-apps-with-videogular2#/
 
+- demo: https://github.com/videogular/custom-element-demo
+- demo: https://github.com/videogular/pip-demo
+
+videogular
+- media framework for Angular 
+  - more than a video player
+- create your own player declaratively
+- Extensible via an intermediate API
+- You can "play" anything that has a begin and an end
+  - not only video
+
+videogular2
+- 6 modules
+- 17 components
+- 4 directives
+- 6 serivces
+
+VgPlayer
+- contains VgMedia, VgPlay, ... 
+- calls VgAPI
+
+```html
+<vg-player>
+    <vg-play-pause></vg-play-pause>
+
+    <video #videoRef 
+           [vgMedia]="videoRef" 
+           id="video" 
+           src="http://static.videogular.com/assets/videos/videogular.mp4">
+    </video>
+</vg-player>
+```
+
+more complex
+
+```html
+<vg-player>
+    <vg-overlay-play></vg-overlay-play>
+
+    <vg-controls>
+        <vg-play-pause></vg-play-pause>
+        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+        <vg-scrub-bar>
+            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+        </vg-scrub-bar>
+        <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+        <vg-mute></vg-mute>
+        <vg-volume></vg-volume>
+        <vg-fullscreen></vg-fullscreen>
+    </vg-controls>
+
+    <video #media [vgMedia]="media" [vgHls]="streamingUrl" id="singleVideo" preload="auto"></video>
+</vg-player>
+```
+
+VgMedia
+- wrapper for HTML5 video/audio
+- attach `[vgMedia]` to video/audio and...
+- any "playable" elements!
+
+```html
+<vg-player>
+    <vg-controls>
+        <vg-play-pause></vg-play-pause>
+
+        <vg-scrub-bar>
+            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+        </vg-scrub-bar>
+
+        <vg-fullscreen></vg-fullscreen>
+    </vg-controls>
+
+    <app-time-viewer #timerRef 
+                     id="timer" 
+                     [vgMedia]="timerRef" 
+                     [duration]="videoRef.duration">
+    </app-time-viewer>
+</vg-player>
+```
+
+Multiple VgMedia
+- automatic register: `[vgMedia]`
+- you can register new one programmatically
+
+VgMaster
+- `[vgMaster]=true`
+- controls depends on this
+
+VgFor
+- control dependency
+
+```html
+<vg-player>
+    <video #videoRef
+           [vgMedia]="videoRef"
+           [src]="source"
+           id="myVideo">
+    </video>
+    
+    <vg-play-pause></vg-play-pause>
+    <vg-mute vgFor="myVideo"></vg-mute>
+</vg-player>
+```
 
 ## [Diving into TypeScript - Dan Wahlin & John Papa](https://www.youtube.com/watch?v=i3iNDdshgrc)
 
