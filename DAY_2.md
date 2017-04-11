@@ -388,6 +388,55 @@ RxJS works like a funnel
 
 ## [Turbocharge Your Angular Testing Workflow - Victor Mejia](https://www.youtube.com/watch?v=wj3dStoEhso)
 
+- https://ngtest-turbo.firebaseapp.com/#/?_k=bi736x
+- https://github.com/victormejia/ngconf2017-test-demo
+
+Few tips you can use to turbocharger angular testing workflow
+
+Biggest hurdle = Setup + Configuration
+
+Angular CLI
+- ng new + ng test
+- --single-run
+- --code-coverage
+
+karma-spec-reporter
+- npm i -D karma-spec-reporter
+- edit karma.conf.js
+- https://github.com/victormejia/ngconf2017-test-demo/commit/19ac83f
+
+Feedback loop for results
+- wallaby.js
+- realtime testing feedback
+- https://github.com/wallabyjs/ngCliWebpackSample
+- https://github.com/victormejia/ngconf2017-test-demo/commit/7684a23
+
+TestBed API
+- easy
+- `configureTestingModule`
+
+Maintaining Tests
+
+Organize tests
+- describe separation
+  - per component intaraction and functionality
+
+a test should tell a story
+- it sentence
+  - meaningful readble sentence
+  - don't follow DRY "to a tee"
+
+mock dependencies to isolate tests
+
+enforce coverage thresholds
+- karma-instanbul-threshold
+- https://github.com/victormejia/ngconf2017-test-demo/commit/abe56faa
+
+prevent bad commits with husky
+- npm i -D husky
+- precommit: npm run lint
+- prepush: ng test --single-run --code-coverage
+
 ## [Interactive video apps with Videogular2 - RAUL JIMENEZ HERRANDO](https://www.youtube.com/watch?v=1J0uQCj0Zm8)
 http://slides.com/elecash/interactive-video-apps-with-videogular2#/
 
