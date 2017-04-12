@@ -30,7 +30,7 @@
 - [RxJS: The Good Parts - Christopher Gosselin & Daniel Figueiredo Caetano](https://www.youtube.com/watch?v=TszoFCFydiM)
 - [Turbocharge Your Angular Testing Workflow - Victor Mejia](https://www.youtube.com/watch?v=wj3dStoEhso)
 - [Interactive video apps with Videogular2 - RAUL JIMENEZ HERRANDO](https://www.youtube.com/watch?v=1J0uQCj0Zm8)
-- [Diving into TypeScript - Dan Wahlin & John Papa](https://www.youtube.com/watch?v=i3iNDdshgrc)
+- [Diving into TypeScript - Dan Wahlin & John Papa](https://www.youtube.com/watch?v=4xScMnaasG0)
 - [Using Components in Angular 1.5 - Jennifer Bland](https://www.youtube.com/watch?v=7eQbQN-Dzm0)
 - [Powering Content Driven Applications with the World’s Most Popular CMS - ROY SIVAN](https://www.youtube.com/watch?v=-PxlDHSgXQY)
 - [Alexa, create a voice activated chat bot - Terence Carroll](https://www.youtube.com/watch?v=rq23g0YoYGg)
@@ -38,7 +38,7 @@
 - [The day I met Steve - ALYSSA NICOL](https://www.youtube.com/watch?v=tfw3bhaDbsA)
 - [FormControl Freaks: Redux Edition - Daniel Figueiredo Caetano & Renee Vrantsidis](https://www.youtube.com/watch?v=vxJUBgTsLgs)
 - [TypeScript: What’s New in 2.2 - Daniel Rosenwasser](https://www.youtube.com/watch?v=0Q1lQKE2qbI)
-- [Voice User Interfaces with Angular - JEREMY WILKIN](https://www.youtube.com/watch?v=XG4-UsmM2C0)
+- [Voice User Interfaces with Angular - JEREMY WILKIN](https://www.youtube.com/watch?v=Exol_iDLxbA)
 - [Firebase:Cloud Functions Workshop - JASON DOBRY](https://www.youtube.com/watch?v=QVAkTFiTr34)
 - [PrimeNG: Native UI Components for Angular - Kito Mann](https://www.youtube.com/watch?v=yzhARGULsVQ)
 - [From Inactive to Reactive with ngrx   Brandon Roberts & Mike Ryan](https://www.youtube.com/watch?v=cyaAhXHhxgk)
@@ -55,9 +55,9 @@
 - [Step by Step   Improving Startup Performance with Lazy Loading in Angular - Manfred Steyer](https://www.youtube.com/watch?v=8VLYjt81-fE)
 
 ## Day 3
-- [Keynote Day 3 - BRAD GREEN and ROM WORMALD](https://www.youtube.com/watch?v=Nj9_p4qvm5U)
+- [Keynote Day 3 - BRAD GREEN and ROB WORMALD](https://www.youtube.com/watch?v=lOOyxwADTjI)
 - Angular Router Authentication & Authorization – REAL LIVE LIVE LIVE LIVE LIVE DEMO
-- Upgrading Enterprise Angular Applications
+- [Upgrading Enterprise Angular Applications - Victor Savkin](https://www.youtube.com/watch?v=izpqQpD8RQ0)
 - [Building EmotiNg - JEN LOOPER, TARA MANICSIC, and TJ VANTOLL](https://www.youtube.com/watch?v=j2S5OrMUj9g)
 - [Using the Angular Template Language Service - CHUCK JADZEWSKI](https://www.youtube.com/watch?v=ez3R0Gi4z5A)
 - [Angular Form Validation - KARA ERICKSON](https://www.youtube.com/watch?v=kM5QBOWrUVI)

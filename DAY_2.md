@@ -605,6 +605,71 @@ Stateless Components
 
 ## [Powering Content Driven Applications with the World’s Most Popular CMS - ROY SIVAN](https://www.youtube.com/watch?v=-PxlDHSgXQY)
 
+@royboy789
+
+WordPress
+- Why WP?
+- How to build with WP
+
+WordPress
+- Popularest CMS
+
+Why?
+- usage
+- WP 27.7%
+- Joomla 3.3%
+- Drupal 2.2%
+
+enterprise concerns
+- No LTS
+- Open Source
+- Mow many updates per year?
+
+Hater gonna hate
+
+Enterprise benefits
+- Do you want to build another CMS?
+  - do you wanner train a team?
+- Code, Tutorials, Extendable
+- Open Source
+
+internet.org
+- WP site
+
+Angular w/ WP
+
+WordPress REST API
+- interact w/ WP content
+
+data is sweet, sweet sweet json
+/wp-json/wp/v2/posts
+
+Simple Endpoints
+- /wp-json/: prefix
+- /wp/v2/: namespace (default)
+- /posts, /pages, /comments, ...
+
+
+Custom API routes
+- namespaces: [ /oembed/1.0, wp/v2 ]
+- plugins
+- multiple applications with same data
+- custom route written in PHP
+  - `add_action('rest_api_init', array($this, 'custom_commision_routes'))`
+  - `register_rest_route`
+
+Use-cases
+- Ionic, NativeScript Native Apps
+- Decoupled apps that utilize WP content
+  - tech team, non-tech team
+- Decoupled apps which interact w/ WP site
+  - custom micro CMS: quick simple
+- Micro widget for other website
+
+Use the ecosystem
+- Don't learn new CMS, don't build new CMS
+- RESTful API is useful and easy
+
 ## [Alexa, create a voice activated chat bot - Terence Carroll](https://www.youtube.com/watch?v=rq23g0YoYGg)
 
 ## [Docker: What Every Angular Developer Should Know About It! - Dan Wahlin](https://www.youtube.com/watch?v=socWfhPJptE)

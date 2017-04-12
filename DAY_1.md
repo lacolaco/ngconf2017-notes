@@ -455,6 +455,7 @@ class {
 ```
 
 CardComponent: Presenter
+
 ```
 @Component({
 selector: 'ow-card'
