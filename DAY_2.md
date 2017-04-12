@@ -730,6 +730,113 @@ Demo
 
 ## [Docker: What Every Angular Developer Should Know About It! - Dan Wahlin](https://www.youtube.com/watch?v=socWfhPJptE)
 
+Windows, Linux, Mac, ...
+
+Angular on Docker
+- Docker for frontend developer
+
+http://codewithdan.me/angular-docker
+
+Challenge
+- nginx
+   - multiple servers
+- DB
+- Caches (redis)
+- down time
+
+How can Docker help?
+- Simplefy building, shipping, running
+- Provides a shipping container system for code
+  - consistent way 
+  - verious testing cases
+- runs natively on Linux or Windows Server (10+)
+
+Role of Images and Containers
+- Docker image
+  - Ubuntu with ASP.NET Core and Application code
+  - Blueprint
+- Docker container
+  - created by using an image. Runs your app
+
+Image
+- read-only template
+  - layered filesystem
+  - create Docker container instances
+
+Container
+- Isolated and secured shipping container
+
+Docker containers vs Virtual Machines
+
+Demo
+
+Docker Hub
+- nginx
+- docker pull nginx
+- docker run -d -p 8080:80 nginx:alpine
+  - daemon mode
+  - port
+
+ng serve is not for prod
+
+with Angular
+- ng new
+- ng build
+  - dist folder
+- cd dist
+- docker run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html nginx:alpine
+  - v: volume mounting
+
+AngularCLI app on docker
+- debug on real server
+
+Docker benefits
+- Accelerate Developer Onboarding
+  - consistent way for staging, testing
+  - designers, managers, ...
+  - easy 
+- Eliminate App conflicts
+  - new version app
+- environment consistency
+  - dev/prod on same server
+- ship software faster
+  - AWS, Azure, ...
+
+Create Docker Environment
+- install docker Community Edition
+  - for Mac, WIndows
+  - both use Alpine Linux
+- create  custom Dockerfile
+- run docker client
+
+Dockerfile
+- Text file used to build docker images
+- build instructions
+- example
+  - FROM microsoft/dotnet
+  - MAINTAINER
+  - COPY ./var/web/app
+  - WORKDIR /var/web/app
+  - RUN dotnet restore
+  - RUN dotnet build
+  - EXPOSE 5000
+  - ENTRYPOINT dotnet run
+- docker build -t {repo}/{image name}:{tag name}
+
+Docker compose use-case
+- many times docker run
+- orchestrate services with Docker Compose
+- one command
+
+- docker-compose.yml
+- Docker Compose Build
+  - docker-compose build
+- Docker images
+- Run
+  - docker-compose up
+    - run images in proper order
+  - docker-compose down
+
 ## [The day I met Steve - ALYSSA NICOL](https://www.youtube.com/watch?v=tfw3bhaDbsA)
 
 ## [FormControl Freaks: Redux Edition - Daniel Figueiredo Caetano & Renee Vrantsidis](https://www.youtube.com/watch?v=vxJUBgTsLgs)
