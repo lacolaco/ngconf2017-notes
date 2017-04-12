@@ -672,6 +672,62 @@ Use the ecosystem
 
 ## [Alexa, create a voice activated chat bot - Terence Carroll](https://www.youtube.com/watch?v=rq23g0YoYGg)
 
+Cinematic Computing
+- We've seen it before
+- familiar
+- we want the future now
+
+Inspiration to Perspiration
+
+Voice design
+- Clearly present options
+- keep is brief
+- avoid too many choices
+
+Create **Skills**
+- Invocation Name
+  - Alexa, open **Nerd Bot**
+  - Alexa, ask **Nerd Bod** who is Kylo Ren
+- Skills are now auto-enabled
+
+Interaction Model
+- Skills
+  - Custom app
+  - Smart Home
+    - lights on/off
+  - Flash Briefing
+    - read news at morning
+
+Interaction Model
+- Intents
+  - Actions
+- Slots
+  - Parameters
+- Utterances
+  - Phrases
+- wiki_awho (INTENT) who is {WHO}(SLOT)
+
+Server
+- Json response from HTTPS
+  - Node.js
+    - JavaScript to create Skills
+  - AWS Lambda
+    - Alexa Skills Kit
+
+Demo
+- https://github.com/thack/ngconf17
+- using Glitch
+  - edit code
+  - show debug view
+    - web forms for alexa
+- alexa skills kit
+  - testing
+    - web forms
+    - listen the response as the voice
+- https://echosim.io
+  - alexa skill testing tool on browser
+- connect to Ionic and Firebase 
+
 ## [Docker: What Every Angular Developer Should Know About It! - Dan Wahlin](https://www.youtube.com/watch?v=socWfhPJptE)
 
 ## [The day I met Steve - ALYSSA NICOL](https://www.youtube.com/watch?v=tfw3bhaDbsA)
