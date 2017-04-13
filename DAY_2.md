@@ -1078,7 +1078,38 @@ Field-specific validation: make new selector and chain it
 
 ## [TypeScript: What’s New in 2.2 - Daniel Rosenwasser](https://www.youtube.com/watch?v=0Q1lQKE2qbI)
 
-## [Voice User Interfaces with Angular - JEREMY WILKIN](https://www.youtube.com/watch?v=XG4-UsmM2C0)
+## [Voice User Interfaces with Angular - JEREMY WILKIN](https://www.youtube.com/watch?v=Exol_iDLxbA)
+
+https://github.com/gnomeontherun/voice-activated-ui-ng-conf-2017
+
+Google Home Platform
+- talk -> angular app
+
+use natural language to improve UX
+
+use case
+- Databank
+  - selecting country, selecting data, ...
+
+Natual language can reduce friction
+
+Voice -> Actions on Google -> api.ai -> Firebase -> Angular
+
+capture voice (or text) input from user
+
+api.ai
+- a UI to craft custom natural language processing
+- normalize input natural language to parameter 
+
+Firebase
+- api.ai -> Cloud Function -> Database
+
+Cautions
+- security
+  - in public
+- authorization
+  - right person
+- privacy issues
 
 ## [Firebase:Cloud Functions Workshop - JASON DOBRY](https://www.youtube.com/watch?v=QVAkTFiTr34)
 
