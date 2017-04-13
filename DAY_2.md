@@ -891,6 +891,191 @@ ask yourself
 
 ## [FormControl Freaks: Redux Edition - Daniel Figueiredo Caetano & Renee Vrantsidis](https://www.youtube.com/watch?v=vxJUBgTsLgs)
 
+Forms w/ Redux
+
+A lot of forms
+
+Redux can make your forms magical
+- lower maintenance cost on large-scale app 
+- centralizes from data, easier abstraction on common operations
+- declarative and template driven forms with validation
+- pure js functions are testable, typable and extendable
+
+Demo
+- Redux-devtool
+- actions by each edit
+
+Unidirectional data flow
+Redux Store -> Selectors transform data -> Form Component -> Actions modify store -> 
+
+- Redux & angular-redux
+- Ramda: utility for reducer
+- Reselect: for selectors
+
+One reducer to rule them all
+
+```ts
+export const rootReducer = combineReducers({
+  form: formReducer,
+})
+```
+
+Interfaces
+
+```ts
+export interface IForm {
+  character: ICharacter;
+}
+
+export interface ICharacter {
+  ...
+}
+```
+
+other forms in `IForm`
+- `state.form.character`, `state.form.qeuipment`
+
+```ts
+export interface IForm {
+  character: ICharacter;
+  equipment: IEquipment;
+}
+```
+
+setting up actions
+- payload: include the path to the form
+
+```ts
+export const saveFOrm = (path, value) => ({
+  type: 'SAVE_FORM',
+  payload: { 
+    path, // string array: ['character'] <- form.character 
+    value
+ }, 
+});
+```
+
+Create Reducer
+- merge form changes at the providerd path
+
+```ts
+export function formReducer(state = initialState: IForm, action) {
+  switch(action.type) {
+    case 'SAVE_FORM': 
+    const propPath = action.payload.path;
+    return assocPath({
+      propPath,
+      merge(path(propPath, state), action.payload.value),
+      state,
+    })
+  }
+}
+```
+
+For Template
+- simple template-driven forms
+- `[(ngModel)]="characterForm.name"`
+
+```ts
+ngOnInit() {
+  // dispatch save action
+  this.ngForm.valueChanges.debounceTime(0)
+    . subscribe(formValues => this.ngRedux.dispatch(
+      saveForm(
+        ['character'],
+        formValues
+      )
+    ));
+  // listern store's change
+  this.formSubs = this.ngRedux.select(state => state.form.character)
+    .subscribe(characterFormState => {
+      this.characterForm = characterFormState;
+    })
+}
+```
+
+ReduxStore -> ( this.characterForm <-ngModel-> ngForm ) -> SAVE_FORM -> Redux Store
+
+![](images/2017-04-13-12-09-00.png)
+
+Multi-entry fields
+
+```
+character: {
+  skills: ['climb', 'Knowledge arcana']
+}
+```
+
+Adding new actions: 'ADD_MULTI_ENTRY_FORM_VALUE', 'UPDATE_MULTI_ENTRY_FORM_VALUE', 'REMOVE_MULTI_ENTRY_FORM_VALUE'
+
+```ts
+onSelectSkills({event, index}) {
+  const skill = event.target.value;
+  this.ngRedux.dispatch(pugInArray({
+    value: skill,
+    index,
+    path: ['character', 'skills']
+  }))
+}
+```
+
+```html
+<div *ngFor="let skillSlot of characterForm.skills; let i = index">
+  <select
+    [value]="skillSlot"
+    (change)="onSelectSkill($event, i)">
+    <option *ngFor="let skill of skills" [value]="skill">
+    {{skill}}
+    </option>
+  </select>
+  <button type="button" (click)="removeSkill(i)"></button>
+</div>
+<button type="button" (click)="addSkill()"></button>
+```
+
+Adding validation
+
+validation as selectors
+- selectors can compute data: function composition
+- no actions for validation
+- memorization benefits if using reselect
+
+selector
+- chain multiple function
+- each functions return value
+
+```ts
+const formStateSelector = (state) => state.form;
+
+const characterFormSelector = createSelector(
+  formStateSelector,
+  (form) => form.character
+)
+```
+
+Validating
+- check required fields
+
+```ts
+export const isFormValid = createSelector(
+  characterFormSelector,
+  character => character.name && character.bioSummary.age && ...
+)
+```
+
+```
+@select(isFormValidSelector)
+isFormValid$: Observable<boolean>
+
+<button type="submit" [disabled]="!(isFormValid$ | async)">
+```
+
+Field-specific validation: make new selector and chain it
+
+- re-usable
+- portable
+- scalable
+
 ## [TypeScript: What’s New in 2.2 - Daniel Rosenwasser](https://www.youtube.com/watch?v=0Q1lQKE2qbI)
 
 ## [Voice User Interfaces with Angular - JEREMY WILKIN](https://www.youtube.com/watch?v=XG4-UsmM2C0)
