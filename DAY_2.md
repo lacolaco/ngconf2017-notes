@@ -1143,6 +1143,60 @@ export const environment = {
 
 ## [PrimeNG: Native UI Components for Angular - Kito Mann](https://www.youtube.com/watch?v=yzhARGULsVQ)
 
+PrimeNG
+- 70+ responsive components
+- easy to use
+- accessibily
+- open source
+- derived from the mighty PrimeFaces
+
+PrimeFaces
+- UI framework for Java EE
+
+Who uses PrimeNG?
+- AirBus
+- BMW
+- Ford
+- ebay
+- intel
+- ...
+
+Demo: components
+
+Documentation built with Angular + PrimeNG
+
+using native input: `pInputText`
+
+Editor: wrapping quill
+- `<p-editor>`
+
+Chips: multiple values in input (example: tag input)
+- `<p-chips [(ngModel)]="values">`
+
+DataScroller
+- infinit scrolling
+- `(onLazyLoad)="loadData($event)"`
+
+DataTable
+
+Toolbar
+
+Tooltip
+
+Dialog
+- `<p-dialog [visible]="true" responsive="true">`
+
+Theming
+- 16 free themes
+- Structual CSS
+  - Padding, layout, margins...
+- Skinning CSS
+  - Colors, background images, ...
+- FontAwesome
+
+Roll your own theme
+- Customize theme SCSS
+
 ## [From Inactive to Reactive with ngrx   Brandon Roberts & Mike Ryan](https://www.youtube.com/watch?v=cyaAhXHhxgk)
 
 ## [Everything is a plugin! Mastering webpack from the inside out - Sean Larkin](https://www.youtube.com/watch?v=4tQiJaFzuJ8)
