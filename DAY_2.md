@@ -1113,6 +1113,34 @@ Cautions
 
 ## [Firebase:Cloud Functions Workshop - JASON DOBRY](https://www.youtube.com/watch?v=QVAkTFiTr34)
 
+- https://codelabs.developers.google.com/codelabs/firebase-cloud-functions-angular
+- http://bit.ly/ngconf-functions
+- https://cloud-functions-angular.firebaseapp.com
+
+Workshop
+- Firebase Hosting
+- Firebase Realtime Database
+- Firebase Cloud Functions
+  - user.onCreated -> welcome message to new user
+  - new message -> Google Cloud Natural Language API -> sentiment -> change font
+  - new message -> sentences -> recent topics
+- Angular CLI
+
+Firebase environment
+- environments.prod.ts
+
+Images Moderation
+- Cloud Vision API
+- ImageMagick
+- Cloud Storage
+
+```ts
+export const environment = {
+  production: true,
+  firebase: {...} // for AngularFire
+};
+```
+
 ## [PrimeNG: Native UI Components for Angular - Kito Mann](https://www.youtube.com/watch?v=yzhARGULsVQ)
 
 ## [From Inactive to Reactive with ngrx   Brandon Roberts & Mike Ryan](https://www.youtube.com/watch?v=cyaAhXHhxgk)
