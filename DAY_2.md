@@ -839,6 +839,56 @@ Docker compose use-case
 
 ## [The day I met Steve - ALYSSA NICOL](https://www.youtube.com/watch?v=tfw3bhaDbsA)
 
+Communication for Employee
+
+"Special characters, please"
+- "It would make our lives easier"
+- "I don't make the rules, I just write the code"
+
+Steve
+- old mental person
+- "grumpy", "difficult"
+- jaded
+
+Why does this happen?
+- not enough resources
+- bos/others takes credit for your work
+- lack of autonomy/lack of control or ownership of your work
+
+- These don't seem like huge, just frustrating
+
+frustration turns to anger
+- angar turns to apathy
+  - just don't care
+- apathy turns to full-blown
+  - burnout
+
+"Browned out workers feel like a cog in a machine, your not human anymore & nobody cares."
+
+Physical Symptons
+- not just fatigue, but sheer exhaustion
+- irritability
+- inability to concentrate
+
+10% of burnout patients -> cancer after leaving the organization
+
+The night I met Becca
+- "I feel numb"
+- "I just can't care anymore"
+- "I'm literally a glorified typewriter"
+- No emotions
+
+Becca is a Steve in the Making
+
+What can we do?
+- have other interests yourself
+- different community
+- remember how you got here
+
+ask yourself
+- what passion once burned in you?
+- waht are your most meaningful reasons for being a developer
+
 ## [FormControl Freaks: Redux Edition - Daniel Figueiredo Caetano & Renee Vrantsidis](https://www.youtube.com/watch?v=vxJUBgTsLgs)
 
 ## [TypeScript: What’s New in 2.2 - Daniel Rosenwasser](https://www.youtube.com/watch?v=0Q1lQKE2qbI)
