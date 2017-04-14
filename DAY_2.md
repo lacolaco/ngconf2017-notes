@@ -1287,6 +1287,86 @@ Redux is not great for making simple things quickly, great for making really lar
 
 ## [Everything is a plugin! Mastering webpack from the inside out - Sean Larkin](https://www.youtube.com/watch?v=4tQiJaFzuJ8)
 
+http://github.com/thelarkinn/ama
+
+- Walk through the source
+- Plugin Anatomy
+- Ulitimate Pwoer
+- We want your help
+
+What's **Tapable**?
+- 200 line plugin library
+- the backof of the plugin system
+- is a EventEmitter
+
+```ts
+module.exports = class basicPlugin {
+  apply(compiler) {
+    compiler.plugin("make", (compilation) => {
+      console.log("in compilation")
+    })
+  }
+}
+```
+
+Tapable instance
+- a class, object that extends Tapable
+  - = Compiler, Compilation
+
+**Compiler**
+
+```ts
+const compiler = webpack({...}) // <- compiler
+```
+
+**Compilation**: Dependency Graph
+- Created by the compiler
+- contains dep graph traversal algo.
+
+**Resolver**
+- file is existing?
+
+**Module Factories**
+- takes successflyy resolved requests
+- collects source for that file
+
+**Parser**: has AST
+- Parses
+- Takes a Module => AST
+- reads import/require and creates **Dependencies**
+
+**Template**
+- Data binding for your modules
+- creates the code you see in your bundles
+- "render"
+  - chunk{module{dep}} -> main.bundle.js
+
+http://github.com/thelarkinn/artsy-webpack-tour
+
+Every instance can be pluginned into!!!
+
+next of webpack
+- https://webpack.js.org/vote/
+- tree-shaking improvement
+- WebAssembly
+  - first class module supports
+  - import .cpp, .rust, .c
+  
+webpack-default project
+- verified preset configuration by core teem
+
+https://github.com/thelarkinn/everything-is-a-plugin
+- git checkout 1.0
+Passing Options to Plugin
+
+Debugging
+- `debugger;`
+- chrome://inspect -> Open dedicated devtools for Node
+- `npm run debug`: `node --inspect --debug-bkr $(npm bin)/webpack --verbose`
+
+`#webpack`
+- questions, gripes, concerns, frustrations
+
 ## [DiY Angular Compiler - URI SHAKED](https://www.youtube.com/watch?v=QQ2plVD0gDI)
 
 https://docs.google.com/presentation/d/1N2FrwCnsnMO9_4w3QtnTMdaBtXXQdvAceXbk9_pEY9E/preview?slide=id.p
