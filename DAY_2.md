@@ -1878,6 +1878,63 @@ Beacon to custom target -> Database
 
 ## [The Memory Leak Brain Drain – Workshop - Jon Boyd](https://www.youtube.com/watch?v=nS53gCp2swc)
 
+http://biznas.io/talks/jon
+
+Large scale memory leaks
+- Multiple developers tackling
+- 6+ monthes
+
+Different issues
+- Memory Bloat
+- Frequent Garbage Collection
+- **Leaks**
+
+See the user. Be the user.
+- severity of leanse
+- normal usage time
+
+Devtools
+- Timeline
+  - Memory
+
+GC implementation is diff in each browser
+
+Visualization of GC
+
+Minor GC
+
+Leaking w/ GC
+- GCor is dumb
+
+Single Threaded Browser
+- GC block then running
+
+Signs
+- Performance degrades
+- APp crash after extended use
+
+Redux help you
+- replay user's state
+
+Why happen?
+- mordern browser, framework, ...
+- your own doing
+
+DOM tree
+
+Long live observables
+- never be completed
+- always need to be unsubscribe
+
+Console API
+- all object or primitive logged to console will remain in memory
+- don't log DOM Node in prod
+
+Devtools
+- Profiles
+  - allocation timeline
+    - find leaking code
+
 ## [Kick Your Components up a Notch with Directives BAM!   Mike Brocchi](https://www.youtube.com/watch?v=VkfHZiMqEd4)
 
 ## [Lost in Translation - Oliver Combe](https://www.youtube.com/watch?v=dihyu1a2bPc)
