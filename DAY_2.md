@@ -1807,6 +1807,47 @@ GraphQL
 
 ## [When You Can’t Use the Word “BIG BANG” - ASIM HUSSAIN](https://www.youtube.com/watch?v=4p1jG2QNc4U)
 
+workshop
+
+AngularJS -> Angular 2
+- no "Big Bang"
+
+convert to SPA
+
+- Mental Model
+- Plan for migrating
+- Case Study
+
+https://github.com/codecraftpro/angularjs-migration-workshop
+
+1. Style Guide for 1.x
+  - separate files
+2. Use TS and build tools
+  - webpack environment
+3. 1.5+
+4. component-ify
+  - Start with the Routed component
+5. ES6-ify (TS)
+  - stop $resourse, use $http
+  - stop .factory(), use .service (use class)
+  - stop $q, use Promise
+  - stop angular.forEach, use for-of
+6. Dual Boot
+  - remove ng-app
+7. Services
+  - third-party 
+    - re-write
+    - find new one
+    - upgrade
+      - `deps: ['$injector']`
+8. Components
+  - re-write in Angular 4
+  - downgrade
+9. Routing 
+  - bootstrap with Angular
+  - Angular Router
+10. Remove AngularJS
+
 ## [Build, Measure, and Machine Learn with Angular - Anna Karpacheva & Sumit Arora](https://www.youtube.com/watch?v=P_FSpwfERAg)
 
 Rangle.io
