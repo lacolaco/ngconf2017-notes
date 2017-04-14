@@ -1937,6 +1937,49 @@ Devtools
 
 ## [Kick Your Components up a Notch with Directives BAM!   Mike Brocchi](https://www.youtube.com/watch?v=VkfHZiMqEd4)
 
+Component's logic -> services
+
+Component's behaviors -> **directives**
+
+Directives
+- Attr
+  - ngclass
+- Struct
+  - ngFor
+- Component
+
+### Declaration & usage
+
+- `[blink]`
+-`@HostBinding() hidden`
+
+Using Inputs
+- `@Input() color`
+- `@HostBinding('style.color') get textColor()` 
+
+```html
+<div blink [color]="'blue'">
+```
+
+Handling Events
+- `@HostListener('click') onClick`
+
+Exposing Events
+- `@Output() colorChanged`
+
+Add behaviors w/ directives
+
+### Practical Usage
+
+Security Service  ----> Component w/ Security + Logic
+
+Security Service  ----> Directive --- > Component,Component,Component,...
+
+`[lockDown]`
+- `@Input() lockDown`
+- `userRoles: string[]`
+- `@HostBinding() disabled()`
+
 ## [Lost in Translation - Oliver Combe](https://www.youtube.com/watch?v=dihyu1a2bPc)
 
 What can Angular do for you?
