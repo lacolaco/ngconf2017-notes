@@ -1534,7 +1534,83 @@ function View_AppComponent_Host_0(l:any):import1.ɵViewDefinition {
 }
 ```
 
-## [Angular Material 2 Workshop - Elad Bezalel & Paul Gschwendtner](https://www.youtube.com/watch?v=NiCoR7cK9JI)
+## [Angular Material 2 Workshop - Elad Bezalel & Paul Gschwendtner](https://www.youtube.com/watch?v=8hIBy2VCUSc)
+
+https://github.com/EladBezalel/material2-start
+
+Workshop
+- Full scratch
+- @angular/flex-layout
+- @angular/material
+
+md-toolbar, md-sidenav-container, md-sidenav
+
+`<div fxLayout="column" fxFlex>`
+- layout container as column
+- children: vertical
+
+`<md-toolbar color="primary">`
+- primary color
+
+`<md-sidenav-container fxFlex>`
+- justify height by flex
+
+
+customize md-list-item height 
+
+```css
+/deep/ .mat-list-item-content {
+  height: auto !important;
+}
+```
+
+Content side
+
+`<div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">`
+- responsive
+- `<md-card fxFlex="80">`
+  - main content (80%)
+- `<md-card fxFlex fxLayout="column" fxLayoutGap="14px">`
+  - fill rest space
+
+Theming
+- no longer build on the fly unlike materual 1
+- choose palette
+  - mat-palette($mat-red)
+- create theme
+  - mat-light-theme($primary, $accent)
+- apply theme
+- add to `styles` (CLI)
+
+Menu
+- `[mdMenuTriggerFor]="themeMenu"`
+
+```html
+<md-menu #themeMenu x-position="before">
+  <button md-menu-item (click)="isDarkTheme = !isDarkTheme">Toggle Theme</button>
+</md-menu>
+```  
+
+FAB
+
+```html
+<button md-fab (click)="openAdminDialog()" class="fab-bottom-right">
+  <md-icon>add</md-icon>
+</button>
+```
+
+Dialog
+- DialogComponent
+- `entryComponents: [DialogComponent],`
+
+```html
+<h3 md-dialog-title>Admin Dialog</h3>
+
+<md-dialog-content>
+  This is the admin dialog.
+</md-dialog-content>
+```
+
 
 ## [Automatic Progressive Web Apps using the Angular Mobile Toolkit   Maxim Slanikov](https://www.youtube.com/watch?v=ecu1vAO23ZM)
 
