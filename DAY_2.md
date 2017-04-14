@@ -1729,6 +1729,82 @@ Automatic PWA
 
 ## [Angular and GraphQL – A modern API for a modern Platform - Uri Goldshtein](https://www.youtube.com/watch?v=rb5i8Bs7-k0)
 
+Performance
+- Rendering
+  - Angular is fast
+- Data handling and network
+  - bottle neck
+
+Angular solved
+- Initial loading and size
+- pre rendering
+- rendering
+- transitions and animations
+- => super fast app
+
+network latency: buttle neck
+
+instantly 
+- Optimistic UI
+- no spinner
+
+caching & prefetching
+
+Apollo solved
+- less network req
+- less data in req
+- component based API
+- realtime communication
+- optimistic UI
+- caching
+- prefetching
+
+GraphQL
+- for facebook, by facebook
+- popular in 2016
+
+https://github.com/urigo/
+
+### Less network && Less data
+
+vs REST API
+- request per data
+
+GraphQL
+- multiple resources in single req
+- minimum data as needed
+- Query Language
+  - editor supports
+
+### component based API
+
+- No service
+  - centric point
+- No data-passing
+  - composition problem
+- directly component-server communication
+  - QraphQL as a proxy
+
+### Realtime
+
+`subscription`
+- to observable: powerful integration
+
+### Optimistic UI
+
+- pagination
+- store rehydration
+- SSR
+- More...
+
+### Backend
+
+- GraphQL Backend in Client
+  - no touching on server
+- Middleware
+- schemahub
+  - only writing schema
+
 ## [When You Can’t Use the Word “BIG BANG” - ASIM HUSSAIN](https://www.youtube.com/watch?v=4p1jG2QNc4U)
 
 ## [Build, Measure, and Machine Learn with Angular - Anna Karpacheva & Sumit Arora](https://www.youtube.com/watch?v=P_FSpwfERAg)
