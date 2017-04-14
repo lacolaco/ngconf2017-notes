@@ -1199,6 +1199,92 @@ Roll your own theme
 
 ## [From Inactive to Reactive with ngrx   Brandon Roberts & Mike Ryan](https://www.youtube.com/watch?v=cyaAhXHhxgk)
 
+ngrx
+- community project
+  - robwormald
+- small, reactive lib for angular
+
+https://github.com/CodeSequence/ngrx-workshop
+
+Demo: Book search
+
+[Search Input] ---> [Search Page] ---> [Search Result]
+
+Requirements
+- show the number of results
+- don't repeat the request
+- keep the result count in sync
+
+Complex app: component hieralchy
+
+Component need a shared state 
+- service
+
+ngrx/store
+- based on redux
+- action/state, reducer/components
+
+Action {type, payload}
+
+Demo
+
+Redux architecture
+
+Reducer: (state, action) => state
+
+`StoreModule.provideStore(reducers)`
+
+`Store extends Observable<Store>  { select<T>: (store) => Observable<T>, dispatch: (Action)=>void }`
+
+Recap
+- Action: components -> reducer
+- State: reducer -> components
+
+Side Effects
+
+ngrx/effects
+- Action can makes new Action
+- "Search Action" can makes "Search Success Action"
+
+```ts
+class Actions extends Observable<Action> {
+  ofType(type: string): Observable<Action>;
+}
+```
+
+```ts
+@Injectable()
+class BookEffects {
+  @Effect() search$: Observable<Action> = this.actions$.ofType(SearchActions.SEARCH)
+    .map((action: SearchActions.Search) => action.payload)
+    .switchMap(terms => this.booksService.searchBooks(terms))
+    .map(results => new SearchActions.SearchSuccess(results))
+    ;
+  
+  constructor(private actions$: Actions){}
+}
+```
+
+`EffectsModule.run(BookEffects)`
+
+Responsibility from components to effects
+- component should have less responsibility
+
+Performance
+- Immutable
+  - reducer creates new state each time
+- no deep dirty check
+
+OnPush-able application
+
+Testing
+
+ngrx/store-devtools
+- `StoreDevtoolsModule.instrumentSrore()`
+- redux-devtools
+
+Redux is not great for making simple things quickly, great for making really large things simple
+
 ## [Everything is a plugin! Mastering webpack from the inside out - Sean Larkin](https://www.youtube.com/watch?v=4tQiJaFzuJ8)
 
 ## [DiY Angular Compiler - URI SHAKED](https://www.youtube.com/watch?v=QQ2plVD0gDI)
