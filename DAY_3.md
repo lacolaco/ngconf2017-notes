@@ -400,6 +400,30 @@ role="button"
 
 ## [Reducing package size and complexity with NgModule - JAMES DANIELS](https://www.youtube.com/watch?v=Q6tfr23fS98)
 
+AngularFire2
+- official library for firebase and angular
+
+AngularFire: all-in-one library
+- larger js
+- auth only use-case
+- how to reduce the size?
+
+rescue: NgModule per feature
+- `AngularFireAuthModule`
+- `AngularFireDatabaseModule`
+- don't wrap firebase.js
+
+Naming
+- angularfire2
+- @firebase/angular
+- @angularfire/*
+- @angular/firebase
+
+AngularFire2 RC proposal
+- https://github.com/angular/angularfire2/issues/854
+- breaking changes
+
+
 ## [Addicted to AngularJS? - PETE BACON DARWIN and GEORGE KALPAKAS](https://www.youtube.com/watch?v=RyY8Brjs-Hg)
 
 We love AngularJS

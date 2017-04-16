@@ -2049,3 +2049,53 @@ Translation Spreadsheet
 https://docs.google.com/presentation/d/1l7kr_OdSxiobAVkTrMG-LGxqsJcj9Fd1zJTNpVXSu7A/edit
 
 ## [Step by Step   Improving Startup Performance with Lazy Loading in Angular - Manfred Steyer](https://www.youtube.com/watch?v=8VLYjt81-fE)
+
+- Lazy Loading and PreLoading
+- SharedModule and Lazy Loading
+
+### Lazy Loading
+
+- module structure
+  - app
+  - features
+  - shared
+
+  lazy loading
+  - separate bundle per feature
+
+  build configuration
+  - CLI: done
+    - ngtools/webpack
+  - webpack
+    - ngtools/webpack
+    - or angular-router-loader
+
+- loading it later
+  - startup: better performance
+  - during execution: delay for loading on demand 
+    - **might** be needed
+    - solved by preloading
+
+### Preloading
+
+`preloadingStrategy`
+
+strategy
+- built-in
+- custom
+  - easy
+
+Demo
+
+### Lazy Loading and SharedModule
+
+all lazy loaded module has own injector
+- 2 services in same app
+
+CoreModule and SharedModule
+- CoreModule: global providers
+  - only imported by AppModule
+- SharedModule: directives
+
+SharedModule with/without global provider
+- `forRoot()`
