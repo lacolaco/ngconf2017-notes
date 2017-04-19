@@ -3,6 +3,8 @@
 
 ## [Keynote - STEPHEN FLUIN and IGOR MINAR](https://www.youtube.com/watch?v=anzsE2TbCyk)
 
+http://bit.ly/angular-ngconf17-keynoteAngu
+
 - Why we build Angular
 
 Docs traffic
@@ -272,6 +274,8 @@ Next
 
 ## [Module vs Module - DEBORAH KURATA](https://www.youtube.com/watch?v=ntJ-P-Cvo7o)
 
+https://docs.google.com/presentation/d/1FjCdli4Fz9UsE1FouBcnbjZvLYB1qxhhtzZlanJOwJg/edit
+
 ES2015 Module vs Angular Module
 
 Lazy loading
@@ -352,6 +356,8 @@ Preparing for Lazy Loading
   - eliminate all ES2015 importing
 
 ## [Embrace Component Tranquility - JUSTIN SCHWARTZENBERGER](https://www.youtube.com/watch?v=d7fLYenKy-I)
+
+https://jschwarty.github.io/ngconf-2017-embrace-component-tranquility/
 
 Componentization
 
@@ -1213,6 +1219,8 @@ Practice first, tools second
 
 ## [The Little Tool That Dreams Big - HANS LARSEN](https://www.youtube.com/watch?v=f9hhzDZXWPM)
 
+https://docs.google.com/presentation/d/12AUE0Tyy-3fCSGCjeBBImT0MVLzJG6h__1Bvt0ZKBYw/edit#slide=id.g1d5c0db042_1_0
+
 started on Material Project
 - help people to make great app
 - cannot solve the matter: before use Material
@@ -1232,7 +1240,7 @@ What is going on under the hood
 Build system in angular CLI
 
 
-ng build/serve: Parse glags
+ng build/serve: Parse flags
 - dev/prod
 - Code gen (prod only)
 - Lazy route
@@ -1348,6 +1356,8 @@ Next
 - Remove ngfactory.ts files (more simpler)
 
 ## [Reactive Programming with RxJS  A Beginner’s Perspective - TRACY LEE and BEN LESH](https://www.youtube.com/watch?v=aZRJOVPMW4k)
+
+https://www.slideshare.net/ladyleet/rxjs-a-beginner-experts-perspective-ngconf-2017
 
 Perspective
 

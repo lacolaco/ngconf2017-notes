@@ -1614,6 +1614,8 @@ Dialog
 
 ## [Automatic Progressive Web Apps using the Angular Mobile Toolkit   Maxim Slanikov](https://www.youtube.com/watch?v=ecu1vAO23ZM)
 
+http://slides.com/webmax/pwa-ng-conf#/
+
 - Milestones of the Web
 Static -> Dynamic -> AJAX -> Responsible -> PWA
 
@@ -1936,6 +1938,8 @@ Devtools
     - find leaking code
 
 ## [Kick Your Components up a Notch with Directives BAM!   Mike Brocchi](https://www.youtube.com/watch?v=VkfHZiMqEd4)
+
+https://docs.google.com/presentation/d/17_RMceQBuTrR2m2vgnJaE7raVh8-69ipCnu6uFk8vJI/edit
 
 Component's logic -> services
 

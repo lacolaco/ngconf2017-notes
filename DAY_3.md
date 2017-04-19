@@ -164,7 +164,7 @@ who allowd to view it
 
 github.com/hirezio/the-princess-guards
 
-## Upgrading Enterprise Angular Applications
+## [Upgrading Enterprise Angular Applications](https://www.youtube.com/watch?v=izpqQpD8RQ0)
 
 Large Business AngularJS Apps
 
@@ -331,6 +331,8 @@ Future
 
 ## [Angular Form Validation - KARA ERICKSON](https://www.youtube.com/watch?v=kM5QBOWrUVI)
 
+https://docs.google.com/presentation/d/1jn52fjrmvuXn5Jv2gP8ckETiKCW057Q63faMRfW3bkw/pub?start=false&loop=false&delayms=3000&slide=id.g128d8fde34_1_2
+
 - overview
 - demo (today)
 - upcoming feature
@@ -481,6 +483,8 @@ Next
 - less boilerplate/Better tooling
 
 ## [Angular Pre Rendering for SEO, Speed, and Happy Users - JEFF CROSS](https://www.youtube.com/watch?v=oXt-d2qG2po)
+
+https://drive.google.com/file/d/0Bw6GBXhPGkUGbEZHbEYwaU1QaDQ/view
 
 PatricJSing
 
@@ -751,6 +755,8 @@ spin-up for first request
 http://bit.ly/ngconf-functions
 
 ## [Best Practice - STEPHEN FLUIN](https://www.youtube.com/watch?v=hHNUohOPCCo)
+
+https://docs.google.com/presentation/d/1dlEE3JMmFtsb1FdFmxhj-vxEfWPfDVp5pXf-YbqAj8o/preview?slide=id.p
 
 https://angular.io/styleguide
 
