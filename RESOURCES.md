@@ -56,7 +56,7 @@
 
 ## Day 3
 - [Keynote Day 3 - BRAD GREEN and ROB WORMALD](https://www.youtube.com/watch?v=lOOyxwADTjI)
-- Angular Router Authentication & Authorization – REAL LIVE LIVE LIVE LIVE LIVE DEMO
+- [Angular Router Authentication and Authorization Real LIVE LIVE LIVE LIVE LIVE Demo - Shai Reznik](https://www.youtube.com/watch?v=yjxOYsRkozQ)
 - [Upgrading Enterprise Angular Applications - Victor Savkin](https://www.youtube.com/watch?v=izpqQpD8RQ0)
 - [Building EmotiNg - JEN LOOPER, TARA MANICSIC, and TJ VANTOLL](https://www.youtube.com/watch?v=j2S5OrMUj9g)
 - [Using the Angular Template Language Service - CHUCK JADZEWSKI](https://www.youtube.com/watch?v=ez3R0Gi4z5A)

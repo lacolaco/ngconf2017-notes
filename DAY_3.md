@@ -154,7 +154,7 @@ AMP (first paint, engage) + PWA (push, ): will get involved
 - click thru to app
 - Instant interactivity (intercept request)
 
-## Angular Router Authentication & Authorization – REAL LIVE LIVE LIVE LIVE LIVE DEMO
+## [Angular Router Authentication and Authorization Real LIVE LIVE LIVE LIVE LIVE Demo - Shai Reznik](https://www.youtube.com/watch?v=yjxOYsRkozQ)
 
 authentication
 verifying indentity
